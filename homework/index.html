@@ -15,6 +15,8 @@
 
     <!-- CSS
     ================================================== -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
     <link rel="stylesheet" href="css/base.css">
     <link rel="stylesheet" href="css/vendor.css">
     <link rel="stylesheet" href="css/main.css">
@@ -23,6 +25,8 @@
     ================================================== -->
     <script src="js/modernizr.js"></script>
     <script src="js/pace.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 
     <!-- jsicons
     ================================================== -->
@@ -52,11 +56,11 @@
                 
                 <ul class="header-nav__list">
                     <li class="current"><a class="smoothscroll"  href="#home" title="home">Home</a></li>
-                    <li><a class="smoothscroll"  href="#hw1" title="hw1">Multiplication Table</a></li>
-                    <li><a class="smoothscroll"  href="#services" title="services">Services</a></li>
-                    <li><a class="smoothscroll"  href="#works" title="works">Works</a></li>
-                    <li><a class="smoothscroll"  href="#stats" title="stats">Statistic</a></li>
-                    <li><a class="smoothscroll"  href="#contact" title="contact">Contact</a></li>
+                    <li><a class="smoothscroll"  href="#hw1" title="homework 1">Multiplication Table</a></li>
+                    <li><a class="smoothscroll"  href="#hw2" title="homework 2">Form Check</a></li>
+                    <li><a class="smoothscroll"  href="#hw3" title="homework 3">Star Rating</a></li>
+                    <li><a class="smoothscroll"  href="#hw4" title="homework 4">Animation</a></li>
+                    <li><a class="smoothscroll"  href="#contact" title="homework 5">Contact</a></li>
                 </ul>
     
                 <p>Perspiciatis hic praesentium nesciunt. Et neque a dolorum <a href='#0'>voluptatem</a> porro iusto sequi veritatis libero enim. Iusto id suscipit veritatis neque reprehenderit.</p>
@@ -113,10 +117,10 @@
         </div> <!-- end home-content -->
 
         <ul class="home-sidelinks">
-            <li><a class="smoothscroll" href="#hw1">Multiplication Table<span>using table</span></a></li>
-            <li><a class="smoothscroll" href="#services">Services<span>what we do</span></a></li>
-            <li><a  class="smoothscroll" href="#works">Works<span>get in touch</span></a></li>
-            <li><a  class="smoothscroll" href="#stats">Stats<span>get in touch</span></a></li>
+            <li><a class="smoothscroll" href="#hw1">Multiplication Table<span>using table to print multiplication table</span></a></li>
+            <li><a class="smoothscroll" href="#hw2">Form Check<span>make a form containing the following fields</span></a></li>
+            <li><a  class="smoothscroll" href="#hw3">Star Rating<span>create a star rating with javascripts</span></a></li>
+            <li><a  class="smoothscroll" href="#hw4">Animation<span>create an animation with javascripts</span></a></li>
             <li><a  class="smoothscroll" href="#contact">Contact<span>get in touch</span></a></li>
         </ul> <!-- end home-sidelinks -->
 
@@ -151,15 +155,13 @@
         <div class="row section-header" data-aos="fade-up">
             <div class="col-full">
                 <h3 class="subhead">Homework 1</h3>
-                <h1 class="display-1">Using table to print multiplication table</h1>
+                <h1 class="display-1">Multiplication table</h1>
             </div>
         </div> <!-- end section-header -->
 
         <div class="row" data-aos="fade-up">
             <div class="col-full">
-                <p class="lead">
-                using document.write() with double for loop 
-                </p>
+                <p class="lead">using document.write() with double for loop </p>
                 <p style="font-family: consolas">
                     <script>
                         for (var i=1; i<10; i++)
@@ -177,22 +179,137 @@
             </div>
         </div> <!-- end about-desc -->
 
+        <div class="row">
+                
+            <div class="hw1-process process block-1-2 block-tab-full">
+    
+                <div class="process__vline-left"></div>
+                <div class="process__vline-right"></div>
+    
+                <div class="col-block process__col" data-item="1" data-aos="fade-up">
+                    <div class="process__text">
+                        <h4>HTML & CSS</h4>
+                        <p>none</p>
+                    </div>
+                </div>
+
+                <div class="col-block process__col" data-item="2" data-aos="fade-up">
+                    <div class="process__text">
+                        <h4>javascripts</h4>
+                        <p>
+                            for (var i=1; i<10; i++)
+                            <br>&nbsp; &nbsp; for (var j = 1; j < 10; j++){
+                            <br>&nbsp; &nbsp; var a = ("00"+j).slice(-2)
+                            <br>&nbsp; &nbsp; var b = ("00"+i).slice(-2)
+                            <br>&nbsp; &nbsp; var c = ("00"+j * i).slice(-2)
+                            <br>&nbsp; &nbsp; if (j == 9)
+                            <br>&nbsp; &nbsp; &nbsp; &nbsp; document.write(a, "*", b, "=", c, "<span><</span>br<span>></span>")
+                            <br>&nbsp; &nbsp; else
+                            <br>&nbsp; &nbsp; &nbsp; &nbsp; document.write(a, "*", b, "=", c, "&nbsp; &nbsp; ")
+                            <br>&nbsp; &nbsp; }
+                        </p>
+                    </div>
+                </div>
+
+            </div> <!-- end process -->
+    
+        </div> <!-- end about-stats -->
+        
+        <style>
+            table, td{
+                border: 1px rgb(0, 0, 0) solid;
+                border-collapse: collapse;
+                padding: 5px;
+                margin-right: 10px;
+                text-align: center;
+                font-family: consolas;
+            }
+        </style>
+        
         <div class="row" data-aos="fade-up">
-            <div class="col-full">                    
-                <style>
-                    table, td{
-                        border: 1px rgb(0, 0, 0) solid;
-                        border-collapse: collapse;
-                        padding: 5px;
-                        margin-right: 10px;
-                    }
-                </style>
+            <div class="col-full">
+                <p class="lead">using object.innerHTML to generate table with script style</p>
+                <p style="font-family: consolas">
+                    <table id=_table99></table>
+                    <script>
+                        var table = document.getElementById("_table99")
+                        var row = table.insertRow(-1)
+                        var str
+                        for (var i=1; i < 10; i++) {
+                            var col = row.insertCell(-1)
+                            str = ""
+                            for (var j = 1; j < 10; j++){
+                                var a = ("00"+i).slice(-2)
+                                var b = ("00"+j).slice(-2)
+                                var c = ("00"+i * j).slice(-2)
+                                str =  str + (a + "*" + b + "=" + c + "<br>")
+                            }
+                            col.innerHTML = str
+                        }
+                    </script>
+                </p>
+            </div>
+        </div> <!-- end about-desc -->
+
+        <div class="row">      
+            <div class="hw1-process process block-1-2 block-tab-full">
+
+                <div class="process__vline-left"></div>
+                <div class="process__vline-right"></div>
+    
+                <div class="col-block process__col" data-item="1" data-aos="fade-up">
+                    <div class="process__text">
+                        <h4>HTML & CSS</h4>
+
+                        <p>
+                            <<span>style</span>>
+                            <br>&nbsp; &nbsp; table, td {
+                            <br>&nbsp; &nbsp; &nbsp; &nbsp; border: 1px rgb(0, 0, 0) solid;
+                            <br>&nbsp; &nbsp; &nbsp; &nbsp; border-collapse: collapse;
+                            <br>&nbsp; &nbsp; &nbsp; &nbsp; padding: 5px;
+                            <br>&nbsp; &nbsp; &nbsp; &nbsp; margin-right: 10px;
+                            <br>&nbsp; &nbsp; &nbsp; &nbsp; font-family: consolas;
+                            <br>&nbsp; &nbsp; }
+                            <br></<span>style</span>>
+                            <br>
+                            <br><<span>table id="_table99"><</span>/table>
+                        </p>
+                    </div>
+                </div>
+                <div class="col-block process__col" data-item="2" data-aos="fade-up">
+                    <div class="process__text">
+                        <h4>javascripts</h4>
+                        <p>
+                            var table = document.getElementById("_table99")
+                            <br>var row = table.insertRow(-1)
+                            <br>for (var i = 1; i < 10; i++) {
+                            <br>&nbsp; &nbsp; var col = row.insertCell(-1)
+                            <br>&nbsp; &nbsp; var str = ""
+                            <br>&nbsp; &nbsp; for (var j = 1; j < 10; j++){
+                            <br>&nbsp; &nbsp; &nbsp; &nbsp; var a = ("00" + (j + 1)).slice(-2)
+                            <br>&nbsp; &nbsp; &nbsp; &nbsp; var b = ("00" + (i + 1)).slice(-2)
+                            <br>&nbsp; &nbsp; &nbsp; &nbsp; var c = ("00" + (j + 1) * (i + 1)).slice(-2) // a * b = c
+                            <br>&nbsp; &nbsp; &nbsp; &nbsp; str =  str + (a + "*" + b + "=" + c + "<<span>br</span>>")
+                            <br>&nbsp; &nbsp; }
+                            <br>&nbsp; &nbsp; col.innerHTML = str
+                            <br>}
+                        </p>
+                    </div>
+                </div>
+    
+            </div> <!-- end process -->
+    
+        </div> <!-- end about-stats -->
+
+        <div class="row" data-aos="fade-up">
+            <div class="col-full">
+                <p class=lead><br><br>using insertRow() & insertCell() to generate table with size = (9, 9) in dynamic</p>
                 <table id="table99"></table>
                 <br>      
                 <script>
-                    function myFunction(i, j) {
+                    function tableFunc(i, j) {
                         var table = document.getElementById("table99");
-                        var row = table.rows[table.rows.length-1]
+                        var row = table.rows[table.rows.length - 1]
                         if (j == 0) {row = table.insertRow(-1)}
                         var col = row.insertCell(-1);
                         var a = ("00" + (j + 1)).slice(-2)
@@ -204,10 +321,11 @@
     
                     for (var i = 0; i < 9; i++)
                         for (var j = 0; j < 9; j++)
-                            myFunction(i, j);
+                            tableFunc(i, j);
                 </script>
             </div>
         </div> <!-- end about-desc -->
+        
         <div class="row">
                 
             <div class="hw1-process process block-1-2 block-tab-full">
@@ -217,41 +335,44 @@
 
                 <div class="col-block process__col" data-item="1" data-aos="fade-up">
                     <div class="process__text">
-                        <h4>Define</h4>
+                        <h4>HTML & CSS</h4>
 
                         <p>
-                        Quos dolores saepe mollitia deserunt accusamus autem reprehenderit. Voluptas facere animi explicabo non quis magni recusandae. 
-                        Numquam debitis pariatur omnis facere unde. Laboriosam minus amet nesciunt est. Et saepe eos maxime tempore quasi deserunt ab.
+                            <<span>style</span>>
+                            <br>&nbsp; &nbsp; table, td {
+                            <br>&nbsp; &nbsp; &nbsp; &nbsp; border: 1px rgb(0, 0, 0) solid;
+                            <br>&nbsp; &nbsp; &nbsp; &nbsp; border-collapse: collapse;
+                            <br>&nbsp; &nbsp; &nbsp; &nbsp; padding: 5px;
+                            <br>&nbsp; &nbsp; &nbsp; &nbsp; margin-right: 10px;
+                            <br>&nbsp; &nbsp; &nbsp; &nbsp; font-family: consolas;
+                            <br>&nbsp; &nbsp; }
+                            <br></<span>style</span>>
+                            <br>
+                            <br><<span>table id="table99"><</span>/table>
                         </p>
                     </div>
                 </div>
                 <div class="col-block process__col" data-item="2" data-aos="fade-up">
                     <div class="process__text">
-                        <h4>Design</h4>
+                        <h4>javascripts</h4>
 
                         <p>
-                        Quos dolores saepe mollitia deserunt accusamus autem reprehenderit. Voluptas facere animi explicabo non quis magni recusandae. 
-                        Numquam debitis pariatur omnis facere unde. Laboriosam minus amet nesciunt est. Et saepe eos maxime tempore quasi deserunt ab.
-                        </p>
-                    </div>
-                </div>
-                <div class="col-block process__col" data-item="3" data-aos="fade-up">
-                    <div class="process__text">
-                        <h4>Build</h4>
-
-                        <p>
-                        Quos dolores saepe mollitia deserunt accusamus autem reprehenderit. Voluptas facere animi explicabo non quis magni recusandae. 
-                        Numquam debitis pariatur omnis facere unde. Laboriosam minus amet nesciunt est. Et saepe eos maxime tempore quasi deserunt ab.
-                        </p>
-                    </div>
-                </div>
-                <div class="col-block process__col" data-item="4" data-aos="fade-up">
-                    <div class="process__text">
-                        <h4>Launch</h4>
-
-                        <p>
-                        Quos dolores saepe mollitia deserunt accusamus autem reprehenderit. Voluptas facere animi explicabo non quis magni recusandae. 
-                        Numquam debitis pariatur omnis facere unde. Laboriosam minus amet nesciunt est. Et saepe eos maxime tempore quasi deserunt ab.
+                            function tableFunc(i, j) {
+                            <br>&nbsp; &nbsp; var table = document.getElementById("table99");
+                            <br>&nbsp; &nbsp; var row = table.rows[table.rows.length - 1]
+                            <br>&nbsp; &nbsp; if (j == 0) {row = table.insertRow(-1)}
+                            <br>&nbsp; &nbsp; var col = row.insertCell(-1);
+                            <br>
+                            <br>&nbsp; &nbsp; var a = ("00" + (j + 1)).slice(-2)
+                            <br>&nbsp; &nbsp; var b = ("00" + (i + 1)).slice(-2)
+                            <br>&nbsp; &nbsp; var c = ("00" + (j + 1) * (i + 1)).slice(-2) // a * b = c
+                            <br>&nbsp; &nbsp; var equation = a + " * " + b + " = " + c
+                            <br>&nbsp; &nbsp; col.innerHTML = equation
+                            <br>}
+                            <br>
+                            <br>for (var i = 0; i < 9; i++)
+                            <br>&nbsp; &nbsp; for (var j = 0; j < 9; j++)
+                            <br>&nbsp; &nbsp; &nbsp; &nbsp; tableFunc(i, j);
                         </p>
                     </div>
                 </div>
@@ -265,12 +386,12 @@
 
     <!-- homework 2 Form Check services
     ================================================== -->
-    <section id='services' class="s-services light-gray">
+    <section id='hw2' class="s-hw2 light-gray">
 
         <div class="row section-header" data-aos="fade-up">
             <div class="col-full">
-                <h3 class="subhead">What We Do</h3>
-                <h1 class="display-1">We have everything you need to launch and grow a successful digital business.</h1>
+                <h3 class="subhead">Homework 2</h3>
+                <h1 class="display-1">Form Check</h1>
             </div>
         </div> <!-- end section-header -->
 
@@ -367,209 +488,110 @@
     </section> <!-- end s-services -->
 
 
-    <!-- homework 3 works
+    <!-- homework 3 Star Rating
     ================================================== -->
-    <section id='works' class="s-works">
+    <section id='hw3' class="s-hw3">
                 
         <div class="row section-header" data-aos="fade-up">
             <div class="col-full">
-                <h3 class="subhead">Featured Works</h3>
-                <h1 class="display-1">These are some of our recent design projects and we are so excited to show them to you.</h1>
+                <h3 class="subhead">Homework 3</h3>
+                <h1 class="display-1">Star Rating</h1>
             </div>
         </div> <!-- end section-header -->
 
-        <div class="row masonry-wrap">
-            <div class="masonry">
+        
+        <style>
+            #rating {
+                text-align: center;
+            }
+            
+            #rating span {
+                font-size: 50px;
+                padding: 0 10px;
+                color: rgb(12, 11, 11);
+                opacity: .5;
+            }
+            
+            #rating span.hover {
+                color: #cc147f;
+                opacity: 1;
+            }
 
-                <div class="masonry__brick" data-aos="fade-up">
-                    <div class="item-folio">
+            #scoring_msg {
+                text-align: center;
+            }
+        </style>
 
-                        <div class="item-folio__thumb">
-                            <a href="images/portfolio/gallery/g-lamp.jpg" class="thumb-link" title="Lamp" data-size="1050x700">
-                                <img src="images/portfolio/lamp.jpg" 
-                                     srcset="images/portfolio/lamp.jpg 1x, images/portfolio/lamp@2x.jpg 2x" alt="">
-                            </a>
-                        </div>
+        <div class="row" data-aos="fade-up">
+            <div id="rating">
+                <span class="fa fa-star"></span>
+                <span class="fa fa-star"></span>
+                <span class="fa fa-star"></span>
+                <span class="fa fa-star"></span>
+                <span class="fa fa-star"></span>
+                <p class=lead></p>
+            </div>
+            
 
-                        <div class="item-folio__text">
-                            <h3 class="item-folio__title">
-                                Lamp
-                            </h3>
-                            <p class="item-folio__cat">
-                                Web Design
-                            </p>
-                        </div>
+        </div>
 
-                        <a href="https://www.behance.net/" class="item-folio__project-link" title="Project link">
-                            Project Link
-                        </a>
+        <script>
+            // Star rating class
+            function StarRating() {
+                // constructor
+                this.init();
+            };
+            
+            StarRating.prototype.init = function() {
+                // initialize
+                this.stars = document.querySelectorAll('#rating span');
+                this.msg = document.querySelector('#rating p');
+                
+                for (var i = 0; i < this.stars.length; i++) {
+                    this.stars[i].setAttribute('data-count', i);
+                    this.stars[i].addEventListener('mouseenter', this.enterStarListener.bind(this));
+                }
+                document.querySelector('#rating').addEventListener('click', this.clickStarListener.bind(this));
+            };
+            
+            StarRating.prototype.enterStarListener = function(e) {
+                // This method is fired when a user hovers over a single star
+                // :param: e
+                this.fillStarsUpToElement(e.target);
+                this.msg.innerHTML = "You are scoring...";
+            };
 
-                        <div class="item-folio__caption">
-                            <p>Vero molestiae sed aut natus excepturi. Et tempora numquam. Temporibus iusto quo.Unde dolorem corrupti neque nisi.</p>
-                        </div>
+            StarRating.prototype.clickStarListener = function(e) {
+                // This method is fired when a user clicks on a single star
+                // :param: e
+                var score = Number(e.target.getAttribute('data-count')) + 1;
+                this.msg.innerHTML = "You give this article rating of " + score + " out of 5.";
+            };
+            
+            StarRating.prototype.fillStarsUpToElement = function(el) {
+                // Fill the star ratings up to a specific position.
+                // :param: el
+                for (var i = 0; i < this.stars.length; i++) {
+                    if (el == null || this.stars[i].getAttribute('data-count') > el.getAttribute('data-count')) {
+                        // Remove old hover states:
+                        this.stars[i].classList.remove('hover');
 
-                    </div> <!-- end item-folio -->
-                </div> <!-- end masonry__brick -->
+                    } else {
+                        // Add new hover states:
+                        this.stars[i].classList.add('hover');
+                    }
+                }
+            };
 
-                <div class="masonry__brick" data-aos="fade-up">
-                    <div class="item-folio">
-
-                        <div class="item-folio__thumb">
-                            <a href="images/portfolio/gallery/g-salad.jpg" class="thumb-link" title="Salad" data-size="1050x700">
-                                <img src="images/portfolio/salad.jpg" 
-                                     srcset="images/portfolio/salad.jpg 1x, images/portfolio/salad@2x.jpg 2x" alt="">
-                            </a>
-                        </div>
-
-                        <div class="item-folio__text">
-                            <h3 class="item-folio__title">
-                                Salad
-                            </h3>
-                            <p class="item-folio__cat">
-                                Branding
-                            </p>
-                        </div>
-
-                        <a href="https://www.behance.net/" class="item-folio__project-link" title="Project link">
-                            Project Link
-                        </a>
-
-                        <span class="item-folio__caption">
-                            <p>Vero molestiae sed aut natus excepturi. Et tempora numquam. Temporibus iusto quo.Unde dolorem corrupti neque nisi.</p>
-                        </span>
-
-                    </div> <!-- end item-folio -->
-                </div> <!-- end masonry__brick -->
-
-                <div class="masonry__brick" data-aos="fade-up">
-                    <div class="item-folio">
-
-                        <div class="item-folio__thumb">
-                            <a href="images/portfolio/gallery/g-woodcraft.jpg" class="thumb-link" title="Woodcraft" data-size="1050x700">
-                                <img src="images/portfolio/woodcraft.jpg"
-                                     srcset="images/portfolio/woodcraft.jpg 1x, images/portfolio/woodcraft@2x.jpg 2x" alt="">
-                            </a>
-                        </div>
-
-                        <div class="item-folio__text">
-                            <h3 class="item-folio__title">
-                                Woodcraft
-                            </h3>
-                            <p class="item-folio__cat">
-                                Branding
-                            </p>
-                        </div>
-
-                        <a href="https://www.behance.net/" class="item-folio__project-link" title="Project link">
-                            Project Link
-                        </a>
-
-                        <span class="item-folio__caption">
-                            <p>Vero molestiae sed aut natus excepturi. Et tempora numquam. Temporibus iusto quo.Unde dolorem corrupti neque nisi.</p>
-                        </span>
-
-                    </div> <!-- end item-folio -->
-                </div> <!-- end masonry__brick -->
-
-                <div class="masonry__brick" data-aos="fade-up">
-                    <div class="item-folio">
-
-                        <div class="item-folio__thumb">
-                            <a href="images/portfolio/gallery/g-liberty.jpg" class="thumb-link" title="Liberty" data-size="1050x700">
-                                <img src="images/portfolio/liberty.jpg"
-                                     srcset="images/portfolio/liberty.jpg 1x, images/portfolio/liberty@2x.jpg 2x" alt="">
-                            </a>
-                        </div>
-
-                        <div class="item-folio__text">
-                            <h3 class="item-folio__title">
-                                Liberty
-                            </h3>
-                            <p class="item-folio__cat">
-                                Web Development
-                            </p>
-                        </div>
-
-                        <a href="https://www.behance.net/" class="item-folio__project-link" title="Project link">
-                            Project Link
-                        </a>
-
-                        <span class="item-folio__caption">
-                            <p>Vero molestiae sed aut natus excepturi. Et tempora numquam. Temporibus iusto quo.Unde dolorem corrupti neque nisi.</p>
-                        </span>
-
-                    </div> <!-- end item-folio -->
-                </div> <!-- end masonry__brick -->
-
-
-                <div class="masonry__brick" data-aos="fade-up">
-                    <div class="item-folio">
-
-                        <div class="item-folio__thumb">
-                            <a href="images/portfolio/gallery/g-fuji.jpg" class="thumb-link" title="Fuji" data-size="1050x700">
-                                <img src="images/portfolio/fuji.jpg"
-                                     srcset="images/portfolio/fuji.jpg 1x, images/portfolio/fuji@2x.jpg 2x" alt="">
-                            </a>
-                        </div>
-
-                        <div class="item-folio__text">
-                            <h3 class="item-folio__title">
-                                Fuji
-                            </h3>
-                            <p class="item-folio__cat">
-                                Web Design
-                            </p>
-                        </div>
-
-                        <a href="https://www.behance.net/" class="item-folio__project-link" title="Project link">
-                            Project Link
-                        </a>
-
-                        <span class="item-folio__caption">
-                            <p>Vero molestiae sed aut natus excepturi. Et tempora numquam. Temporibus iusto quo.Unde dolorem corrupti neque nisi.</p>
-                        </span>
-
-                    </div> <!-- end item-folio -->
-                </div> <!-- end masonry__brick -->
-
-                <div class="masonry__brick" data-aos="fade-up">
-                    <div class="item-folio">
-
-                        <div class="item-folio__thumb">
-                            <a href="images/portfolio/gallery/g-shutterbug.jpg" class="thumb-link" title="Shutterbug" data-size="1050x700">
-                                <img src="images/portfolio/shutterbug.jpg"
-                                     srcset="images/portfolio/shutterbug.jpg 1x, images/portfolio/shutterbug@2x.jpg 2x" alt="">
-                            </a>
-                        </div>
-
-                        <div class="item-folio__text">
-                            <h3 class="item-folio__title">
-                                Lady Shutterbug
-                            </h3>
-                            <p class="item-folio__cat">
-                                Branding
-                            </p>
-                        </div>
-
-                        <a href="https://www.behance.net/" class="item-folio__project-link" title="Project link">
-                            Project Link
-                        </a>
-
-                        <span class="item-folio__caption">
-                            <p>Vero molestiae sed aut natus excepturi. Et tempora numquam. Temporibus iusto quo.Unde dolorem corrupti neque nisi.</p>
-                        </span>
-
-                    </div> <!-- end item-folio -->
-                </div> <!-- end masonry__brick -->
-
-            </div> <!-- end masonry -->
-        </div> <!-- end masonry-wrap -->
+            // Run:
+            new StarRating();
+        </script>
 
         <div class="testimonials-wrap" data-aos="fade-up">
 
             <div class="row">
                 <div class="col-full testimonials-header">
-                    <h2 class="h1">What Clients Are Saying.</h2>
+                    <h2 class="h1">How It Works</h2>
                 </div>
             </div>
 
@@ -578,35 +600,106 @@
                 <div class="col-full testimonials__slider">
 
                     <div class="testimonials__slide">
-                        <img src="images/avatars/user-01.jpg" alt="Author image" class="testimonials__avatar">
-                        <p>Qui ipsam temporibus quisquam velMaiores eos cumque distinctio nam accusantium ipsum. 
-                        Laudantium quia consequatur molestias delectus culpa facere hic dolores aperiam. Accusantium quos qui praesentium corpori.</p>
-                        <div class="testimonials__author">
-                            Tim Cook
-                            <span>CEO, Apple</span>
+                        <img src="images/avatars/html.png" alt="Author image" class="testimonials__avatar">
+                        <p>
+                            <<span>!-- Add icon library --</span>>
+                            <br><<span>link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"</span>>
+                            <br>
+                            <br><<span>div id=rating</span>>
+                            <br>&nbsp; &nbsp; <<span>span class="fa fa-star"</span>></span>
+                            <br>&nbsp; &nbsp; <<span>span class="fa fa-star"</span>></span>
+                            <br>&nbsp; &nbsp; <<span>span class="fa fa-star"</span>></span>
+                            <br>&nbsp; &nbsp; <<span>span class="fa fa-star"</span>></span>
+                            <br>&nbsp; &nbsp; <<span>span class="fa fa-star"</span>></span>
+                            <br><<span>/div</span>>
+                        </p>
+                    </div> <!-- end testimonials__slide -->
+
+                    <div class="testimonials__slide">
+                        <img src="images/avatars/css.png" alt="Author image" class="testimonials__avatar">
+                        <div>
+                            <a data-toggle=collapse data-target="#rating_style">#rating</a> {
+                            <p id=rating_style class=collapse>
+                            &nbsp; &nbsp; text-align: center;
+                            <br>}
+                            </p>
+
+                            <br><a data-toggle=collapse data-target="#span_style">#rating span</a> {
+                            <p id=span_style class=collapse>
+                            &nbsp; &nbsp; font-size: 50px;
+                            <br>&nbsp; &nbsp; padding: 0 10px;
+                            <br>&nbsp; &nbsp; color: rgb(12, 11, 11);
+                            <br>&nbsp; &nbsp; opacity: .5;
+                            <br>}
+                            </p>
+                            
+                            <br><a data-toggle=collapse data-target="#span_hover_style">#rating span.hover</a> {
+                            <p id=span_hover_style class=collapse>
+                            &nbsp; &nbsp; color: #cc147f;
+                            <br>&nbsp; &nbsp; opacity: 1;
+                            <br>}
+                            </p>
+
                         </div>
                     </div> <!-- end testimonials__slide -->
 
                     <div class="testimonials__slide">
-                        <img src="images/avatars/user-05.jpg" alt="Author image" class="testimonials__avatar">
-                        <p>Excepturi nam cupiditate culpa doloremque deleniti repellat. Veniam quos repellat voluptas animi adipisci.
-                        Nisi eaque consequatur. Quasi voluptas eius distinctio. Atque eos maxime. Qui ipsam temporibus quisquam vel.</p>
-                        <div class="testimonials__author">
-                            Sundar Pichai
-                            <span>CEO, Google</span>
-                        </div>
-                    </div> <!-- end testimonials__slide -->
+                        <img src="images/avatars/javascript.png" alt="Author image" class="testimonials__avatar">
+                        <div>
+                            // Star rating class
+                            <br><a data-toggle=collapse data-target="#rating_constructor">function StarRating()</a> {
+                            <p id=rating_constructor class=collapse>&nbsp; &nbsp; // constructor
+                            <br>&nbsp; &nbsp; this.init();
+                            <br>};
+                            </p>
+                            
+                            <br><a data-toggle=collapse data-target="#rating_init">StarRating.prototype.init = function()</a> {
+                            <p id=rating_init class=collapse>&nbsp; &nbsp; // initialize
+                            <br>&nbsp; &nbsp; this.stars = document.querySelectorAll('#rating span');
+                            <br>&nbsp; &nbsp; for (var i = 0; i < this.stars.length; i++) {
+                            <br>&nbsp; &nbsp; &nbsp; &nbsp; this.stars[i].setAttribute('data-count', i);
+                            <br>&nbsp; &nbsp; &nbsp; &nbsp; this.stars[i].addEventListener('click', this.enterStarListener.bind(this));
+                            <br>&nbsp; &nbsp; }
+                            <br>&nbsp; &nbsp; document.querySelector('#rating').addEventListener('click', this.clickStarListener.bind(this));
+                            <br>};
+                            </p>
 
-                    <div class="testimonials__slide">
-                        <img src="images/avatars/user-02.jpg" alt="Author image" class="testimonials__avatar">
-                        <p>Repellat dignissimos libero. Qui sed at corrupti expedita voluptas odit. Nihil ea quia nesciunt. Ducimus aut sed ipsam.  
-                        Autem eaque officia cum exercitationem sunt voluptatum accusamus. Quasi voluptas eius distinctio.</p>
-                        <div class="testimonials__author">
-                            Satya Nadella
-                            <span>CEO, Microsoft</span>
+                            <br><a data-toggle=collapse data-target="#rating_listener">StarRating.prototype.enterStarListener = function(e)</a> {
+                            <p id=rating_listener class=collapse>&nbsp; &nbsp; // This method is fired when a user hovers over a single star
+                            <br>&nbsp; &nbsp; // :param: e
+                            <br>&nbsp; &nbsp; this.fillStarsUpToElement(e.target);
+                            <br>};
+                            </p>
+
+                            <br><a data-toggle=collapse data-target="#rating_click">StarRating.prototype.clickStarListener = function(e)</a> {
+                            <p id=rating_click class=collapse>&nbsp; &nbsp; // This method is fired when a user clicks on a single star
+                            <br>&nbsp; &nbsp; // :param: e
+                            <br>&nbsp; &nbsp; var score = Number(e.target.getAttribute('data-count')) + 1;
+                            <br>&nbsp; &nbsp; this.msg.innerHTML = "You give this article rating of " + score + " out of 5.";
+                            <br>};
+                            </p>
+
+                            <br><a data-toggle=collapse data-target="#rating_fill">StarRating.prototype.fillStarsUpToElement = function(el)</a> {
+                            <p id=rating_fill class=collapse>&nbsp; &nbsp; // Fill the star ratings up to a specific position.
+                            <br>&nbsp; &nbsp; // :param: el
+                            <br>&nbsp; &nbsp; for (var i = 0; i < this.stars.length; i++) {
+                            <br>&nbsp; &nbsp; &nbsp; &nbsp; if (el == null || this.stars[i].getAttribute('data-count') > el.getAttribute('data-count')) {
+                            <br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; // Remove old hover states:
+                            <br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; this.stars[i].classList.remove('hover');
+                            <br>
+                            <br>&nbsp; &nbsp; &nbsp; &nbsp; } else {
+                            <br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; // Add new hover states:
+                            <br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; this.stars[i].classList.add('hover');
+                            <br>&nbsp; &nbsp; &nbsp; &nbsp; }
+                            <br>&nbsp; &nbsp; }
+                            <br>};
+                            </p>
+
+                            <br>// Run:
+                            <br>new StarRating();
                         </div>
                     </div> <!-- end testimonials__slide -->
-                    
+                
                 </div> <!-- end testimonials__slider -->
 
             </div> <!-- end testimonials -->
@@ -616,26 +709,26 @@
     </section> <!-- end s-works -->
 
 
-    <!-- homework 4 stats
+    <!-- homework 4 Animation
     ================================================== -->
-    <section id="stats" class="s-stats">
+    <section id="hw4" class="s-hw4">
 
-        <div class="row stats block-1-4 block-m-1-2 block-mob-full" data-aos="fade-up">
+        <div class="row hw4 block-1-4 block-m-1-2 block-mob-full" data-aos="fade-up">
                 
-            <div class="col-block stats__col ">
-                <div class="stats__count">129</div>
+            <div class="col-block hw4__col ">
+                <div class="hw4__count">129</div>
                 <h5>Awards Received</h5>
             </div>
-            <div class="col-block stats__col">
-                <div class="stats__count">1507</div>
+            <div class="col-block hw4__col">
+                <div class="hw4__count">1507</div>
                 <h5>Cups of Coffee</h5>
             </div>
-            <div class="col-block stats__col">
-                <div class="stats__count">108</div>
+            <div class="col-block hw4__col">
+                <div class="hw4__count">108</div>
                 <h5>Projects Completed</h5>
             </div>
-            <div class="col-block stats__col">
-                <div class="stats__count">103</div>
+            <div class="col-block hw4__col">
+                <div class="hw4__count">103</div>
                 <h5>Happy Clients</h5> 
             </div>
 
