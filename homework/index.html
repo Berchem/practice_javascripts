@@ -20,13 +20,15 @@
     <link rel="stylesheet" href="css/base.css">
     <link rel="stylesheet" href="css/vendor.css">
     <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/homework.css">
 
     <!-- script
     ================================================== -->
-    <script src="js/modernizr.js"></script>
-    <script src="js/pace.min.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <script src="js/modernizr.js"></script>
+    <script src="js/pace.min.js"></script>
+    <script src="js/homework.js"></script>
 
     <!-- jsicons
     ================================================== -->
@@ -60,26 +62,23 @@
                     <li><a class="smoothscroll"  href="#hw2" title="homework 2">Form Check</a></li>
                     <li><a class="smoothscroll"  href="#hw3" title="homework 3">Star Rating</a></li>
                     <li><a class="smoothscroll"  href="#hw4" title="homework 4">Animation</a></li>
-                    <li><a class="smoothscroll"  href="#contact" title="homework 5">Contact</a></li>
+                    <li><a class="smoothscroll"  href="#hw5" title="homework 5">Calendar</a></li>
                 </ul>
     
                 <p>Perspiciatis hic praesentium nesciunt. Et neque a dolorum <a href='#0'>voluptatem</a> porro iusto sequi veritatis libero enim. Iusto id suscipit veritatis neque reprehenderit.</p>
     
                 <ul class="header-nav__social">
                     <li>
-                        <a href="#0"><i class="fab fa-facebook"></i></a>
+                        <a target="_blank" rel="noopener noreferrer" href="https://www.facebook.com/warum118"><i class="fab fa-facebook"></i></a>
                     </li>
                     <li>
-                        <a href="#0"><i class="fab fa-twitter"></i></a>
+                        <a target="_blank" rel="noopener noreferrer" href="https://twitter.com/Berchem_Lin"><i class="fab fa-twitter"></i></a>
                     </li>
                     <li>
-                        <a href="#0"><i class="fab fa-instagram"></i></a>
+                        <a target="_blank" rel="noopener noreferrer" href="https://www.instagram.com/berchem_lin"><i class="fab fa-instagram"></i></a>
                     </li>
                     <li>
-                        <a href="#0"><i class="fab fa-behance"></i></a>
-                    </li>
-                    <li>
-                        <a href="#0"><i class="fab fa-dribbble"></i></a>
+                        <a target="_blank" rel="noopener noreferrer" href="https://github.com/Berchem"><i class="fab fa-github"></i></a>
                     </li>
                 </ul>
 
@@ -121,22 +120,26 @@
             <li><a class="smoothscroll" href="#hw2">Form Check<span>make a form containing the following fields</span></a></li>
             <li><a  class="smoothscroll" href="#hw3">Star Rating<span>create a star rating with javascripts</span></a></li>
             <li><a  class="smoothscroll" href="#hw4">Animation<span>create an animation with javascripts</span></a></li>
-            <li><a  class="smoothscroll" href="#contact">Contact<span>get in touch</span></a></li>
+            <li><a  class="smoothscroll" href="#hw5">Calendar<span>2010 - 2020</span></a></li>
         </ul> <!-- end home-sidelinks -->
 
         <ul class="home-social">
             <li class="home-social-title">Follow Me</li>
-            <li><a href="#0">
+            <li><a target="_blank" rel="noopener noreferrer" href="https://www.facebook.com/warum118">
                 <i class="fab fa-facebook"></i>
                 <span class="home-social-text">Facebook</span>
             </a></li>
-            <li><a href="#0">
+            <li><a target="_blank" rel="noopener noreferrer" href="https://twitter.com/Berchem_Lin">
                 <i class="fab fa-twitter"></i>
                 <span class="home-social-text">Twitter</span>
             </a></li>
-            <li><a href="#0">
-                <i class="fab fa-linkedin"></i>
-                <span class="home-social-text">LinkedIn</span>
+            <li><a target="_blank" rel="noopener noreferrer" href="https://github.com/Berchem">
+                <i class="fab fa-instagram"></i>
+                <span class="home-social-text">Instagram</span>
+            </a></li>
+            <li><a target="_blank" rel="noopener noreferrer" href="https://github.com/Berchem">
+                <i class="fab fa-github"></i>
+                <span class="home-social-text">Github</span>
             </a></li>
         </ul> <!-- end home-social -->
 
@@ -159,6 +162,7 @@
             </div>
         </div> <!-- end section-header -->
 
+        <!-- document.write() -->
         <div class="row" data-aos="fade-up">
             <div class="col-full">
                 <p class="lead">using document.write() with double for loop </p>
@@ -179,6 +183,7 @@
             </div>
         </div> <!-- end about-desc -->
 
+        <!-- pseudo code -->
         <div class="row">
                 
             <div class="hw1-process process block-1-2 block-tab-full">
@@ -189,14 +194,14 @@
                 <div class="col-block process__col" data-item="1" data-aos="fade-up">
                     <div class="process__text">
                         <h4>HTML & CSS</h4>
-                        <p>none</p>
+                        <p class=pseudo>none</p>
                     </div>
                 </div>
 
                 <div class="col-block process__col" data-item="2" data-aos="fade-up">
                     <div class="process__text">
                         <h4>javascripts</h4>
-                        <p>
+                        <p class=pseudo>
                             for (var i=1; i<10; i++)
                             <br>&nbsp; &nbsp; for (var j = 1; j < 10; j++){
                             <br>&nbsp; &nbsp; var a = ("00"+j).slice(-2)
@@ -215,17 +220,7 @@
     
         </div> <!-- end about-stats -->
         
-        <style>
-            table, td{
-                border: 1px rgb(0, 0, 0) solid;
-                border-collapse: collapse;
-                padding: 5px;
-                margin-right: 10px;
-                text-align: center;
-                font-family: consolas;
-            }
-        </style>
-        
+        <!-- innerHTML scripts style -->
         <div class="row" data-aos="fade-up">
             <div class="col-full">
                 <p class="lead">using object.innerHTML to generate table with script style</p>
@@ -251,6 +246,7 @@
             </div>
         </div> <!-- end about-desc -->
 
+        <!-- pseudo code -->
         <div class="row">      
             <div class="hw1-process process block-1-2 block-tab-full">
 
@@ -261,7 +257,7 @@
                     <div class="process__text">
                         <h4>HTML & CSS</h4>
 
-                        <p>
+                        <p class=pseudo>
                             <<span>style</span>>
                             <br>&nbsp; &nbsp; table, td {
                             <br>&nbsp; &nbsp; &nbsp; &nbsp; border: 1px rgb(0, 0, 0) solid;
@@ -270,7 +266,7 @@
                             <br>&nbsp; &nbsp; &nbsp; &nbsp; margin-right: 10px;
                             <br>&nbsp; &nbsp; &nbsp; &nbsp; font-family: consolas;
                             <br>&nbsp; &nbsp; }
-                            <br></<span>style</span>>
+                            <br><<span>/style</span>>
                             <br>
                             <br><<span>table id="_table99"><</span>/table>
                         </p>
@@ -279,7 +275,7 @@
                 <div class="col-block process__col" data-item="2" data-aos="fade-up">
                     <div class="process__text">
                         <h4>javascripts</h4>
-                        <p>
+                        <p class=pseudo>
                             var table = document.getElementById("_table99")
                             <br>var row = table.insertRow(-1)
                             <br>for (var i = 1; i < 10; i++) {
@@ -301,31 +297,17 @@
     
         </div> <!-- end about-stats -->
 
+        <!-- object-oriented style -->
         <div class="row" data-aos="fade-up">
             <div class="col-full">
-                <p class=lead><br><br>using insertRow() & insertCell() to generate table with size = (9, 9) in dynamic</p>
+                <p class=lead><br><br>using insertRow() & insertCell() to generate table with size = (9, 9) in dynamic&nbsp; &nbsp; 
+                    <button onclick="callTableFunc(9, 9, 'table99')">Show Table</button>
+                </p>
                 <table id="table99"></table>
-                <br>      
-                <script>
-                    function tableFunc(i, j) {
-                        var table = document.getElementById("table99");
-                        var row = table.rows[table.rows.length - 1]
-                        if (j == 0) {row = table.insertRow(-1)}
-                        var col = row.insertCell(-1);
-                        var a = ("00" + (j + 1)).slice(-2)
-                        var b = ("00" + (i + 1)).slice(-2)
-                        var c = ("00" + (j + 1) * (i + 1)).slice(-2) // a * b = c
-                        var equation = a + " * " + b + " = " + c
-                        col.innerHTML = equation
-                    }
-    
-                    for (var i = 0; i < 9; i++)
-                        for (var j = 0; j < 9; j++)
-                            tableFunc(i, j);
-                </script>
             </div>
         </div> <!-- end about-desc -->
         
+        <!-- pseudo code -->
         <div class="row">
                 
             <div class="hw1-process process block-1-2 block-tab-full">
@@ -337,7 +319,7 @@
                     <div class="process__text">
                         <h4>HTML & CSS</h4>
 
-                        <p>
+                        <p class=pseudo>
                             <<span>style</span>>
                             <br>&nbsp; &nbsp; table, td {
                             <br>&nbsp; &nbsp; &nbsp; &nbsp; border: 1px rgb(0, 0, 0) solid;
@@ -346,19 +328,21 @@
                             <br>&nbsp; &nbsp; &nbsp; &nbsp; margin-right: 10px;
                             <br>&nbsp; &nbsp; &nbsp; &nbsp; font-family: consolas;
                             <br>&nbsp; &nbsp; }
-                            <br></<span>style</span>>
+                            <br><<span>/style</span>>
                             <br>
+                            <br><<span>button onclick="callTableFunc(9, 9, 'table99')"</span>>Show Table<<span>/button</span>>
                             <br><<span>table id="table99"><</span>/table>
                         </p>
                     </div>
                 </div>
+
                 <div class="col-block process__col" data-item="2" data-aos="fade-up">
                     <div class="process__text">
                         <h4>javascripts</h4>
 
-                        <p>
-                            function tableFunc(i, j) {
-                            <br>&nbsp; &nbsp; var table = document.getElementById("table99");
+                        <p class=pseudo>
+                            function tableFunc(i, j, id) {
+                            <br>&nbsp; &nbsp; var table = document.getElementById(id);
                             <br>&nbsp; &nbsp; var row = table.rows[table.rows.length - 1]
                             <br>&nbsp; &nbsp; if (j == 0) {row = table.insertRow(-1)}
                             <br>&nbsp; &nbsp; var col = row.insertCell(-1);
@@ -370,9 +354,10 @@
                             <br>&nbsp; &nbsp; col.innerHTML = equation
                             <br>}
                             <br>
-                            <br>for (var i = 0; i < 9; i++)
-                            <br>&nbsp; &nbsp; for (var j = 0; j < 9; j++)
-                            <br>&nbsp; &nbsp; &nbsp; &nbsp; tableFunc(i, j);
+                            <br>function callTableFunc(m, n, id){
+                            <br>&nbsp; &nbsp; for (var i = 0; i < m; i++)
+                            <br>&nbsp; &nbsp; &nbsp; &nbsp; for (var j = 0; j < n; j++)
+                            <br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; tableFunc(i, j, id);
                         </p>
                     </div>
                 </div>
@@ -499,30 +484,9 @@
             </div>
         </div> <!-- end section-header -->
 
-        
-        <style>
-            #rating {
-                text-align: center;
-            }
-            
-            #rating span {
-                font-size: 50px;
-                padding: 0 10px;
-                color: rgb(12, 11, 11);
-                opacity: .5;
-            }
-            
-            #rating span.hover {
-                color: #cc147f;
-                opacity: 1;
-            }
-
-            #scoring_msg {
-                text-align: center;
-            }
-        </style>
-
+        <!-- star rating -->
         <div class="row" data-aos="fade-up">
+
             <div id="rating">
                 <span class="fa fa-star"></span>
                 <span class="fa fa-star"></span>
@@ -531,62 +495,10 @@
                 <span class="fa fa-star"></span>
                 <p class=lead></p>
             </div>
-            
 
         </div>
 
-        <script>
-            // Star rating class
-            function StarRating() {
-                // constructor
-                this.init();
-            };
-            
-            StarRating.prototype.init = function() {
-                // initialize
-                this.stars = document.querySelectorAll('#rating span');
-                this.msg = document.querySelector('#rating p');
-                
-                for (var i = 0; i < this.stars.length; i++) {
-                    this.stars[i].setAttribute('data-count', i);
-                    this.stars[i].addEventListener('mouseenter', this.enterStarListener.bind(this));
-                }
-                document.querySelector('#rating').addEventListener('click', this.clickStarListener.bind(this));
-            };
-            
-            StarRating.prototype.enterStarListener = function(e) {
-                // This method is fired when a user hovers over a single star
-                // :param: e
-                this.fillStarsUpToElement(e.target);
-                this.msg.innerHTML = "You are scoring...";
-            };
-
-            StarRating.prototype.clickStarListener = function(e) {
-                // This method is fired when a user clicks on a single star
-                // :param: e
-                var score = Number(e.target.getAttribute('data-count')) + 1;
-                this.msg.innerHTML = "You give this article rating of " + score + " out of 5.";
-            };
-            
-            StarRating.prototype.fillStarsUpToElement = function(el) {
-                // Fill the star ratings up to a specific position.
-                // :param: el
-                for (var i = 0; i < this.stars.length; i++) {
-                    if (el == null || this.stars[i].getAttribute('data-count') > el.getAttribute('data-count')) {
-                        // Remove old hover states:
-                        this.stars[i].classList.remove('hover');
-
-                    } else {
-                        // Add new hover states:
-                        this.stars[i].classList.add('hover');
-                    }
-                }
-            };
-
-            // Run:
-            new StarRating();
-        </script>
-
+        <!-- pseudo code -->
         <div class="testimonials-wrap" data-aos="fade-up">
 
             <div class="row">
@@ -599,9 +511,10 @@
 
                 <div class="col-full testimonials__slider">
 
+                    <!-- HTML -->
                     <div class="testimonials__slide">
                         <img src="images/avatars/html.png" alt="Author image" class="testimonials__avatar">
-                        <p>
+                        <p class=pseudo>
                             <<span>!-- Add icon library --</span>>
                             <br><<span>link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"</span>>
                             <br>
@@ -615,9 +528,10 @@
                         </p>
                     </div> <!-- end testimonials__slide -->
 
+                    <!-- CSS -->
                     <div class="testimonials__slide">
                         <img src="images/avatars/css.png" alt="Author image" class="testimonials__avatar">
-                        <div>
+                        <div class=pseudo>
                             <a data-toggle=collapse data-target="#rating_style">#rating</a> {
                             <p id=rating_style class=collapse>
                             &nbsp; &nbsp; text-align: center;
@@ -643,9 +557,10 @@
                         </div>
                     </div> <!-- end testimonials__slide -->
 
+                    <!-- JavaScripts -->
                     <div class="testimonials__slide">
                         <img src="images/avatars/javascript.png" alt="Author image" class="testimonials__avatar">
-                        <div>
+                        <div class=pseudo>
                             // Star rating class
                             <br><a data-toggle=collapse data-target="#rating_constructor">function StarRating()</a> {
                             <p id=rating_constructor class=collapse>&nbsp; &nbsp; // constructor
@@ -713,6 +628,13 @@
     ================================================== -->
     <section id="hw4" class="s-hw4">
 
+        <div class="row section-header" data-aos="fade-up">
+            <div class="col-full">
+                <h3 class="subhead subhead--light">Homework 4</h3>
+                <h1 class="display-1 display-1--light">Animation</h1>
+            </div>
+        </div> <!-- end section-header -->
+
         <div class="row hw4 block-1-4 block-m-1-2 block-mob-full" data-aos="fade-up">
                 
             <div class="col-block hw4__col ">
@@ -739,12 +661,12 @@
 
     <!-- homework 5 contact
     ================================================== -->
-    <section id="contact" class="s-contact">
+    <section id="hw5" class="s-contact">
 
         <div class="row section-header" data-aos="fade-up">
             <div class="col-full">
-                <h3 class="subhead subhead--light">Contact Us</h3>
-                <h1 class="display-1 display-1--light">Get in touch and let's make something great together. Let's turn your idea on an even greater product.</h1>
+                <h3 class="subhead subhead--light">Homework 5</h3>
+                <h1 class="display-1 display-1--light">Calendar</h1>
             </div>
         </div> <!-- end section-header -->
 
@@ -871,6 +793,7 @@ Copyright &copy;<script>document.write(new Date().getFullYear());</script> All r
     <script src="js/jquery-3.2.1.min.js"></script>
     <script src="js/plugins.js"></script>
     <script src="js/main.js"></script>
+    <script src="js/homework.js"></script>
 
 </body>
 
