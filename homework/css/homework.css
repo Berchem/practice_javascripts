@@ -1,0 +1,42 @@
+.pseudo {
+    font-family: consolas;
+}
+
+/* homework 1 */
+table, td {
+    border: 1px rgb(0, 0, 0) solid;
+    border-collapse: collapse;
+    padding: 5px;
+    margin-right: 10px;
+    text-align: center;
+    font-family: consolas;
+}
+
+/* homework 2 */
+
+
+/* homework 3 */
+#rating {
+    text-align: center;
+}
+            
+#rating span {
+    font-size: 50px;
+    padding: 0 10px;
+    color: rgb(12, 11, 11);
+    opacity: .5;
+}
+            
+#rating span.hover {
+    color: #cc147f;
+    opacity: 1;
+}
+
+#scoring_msg {
+    text-align: center;
+}
+
+/* homework 4 */
+
+
+/* homework 5 */
