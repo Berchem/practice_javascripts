@@ -191,14 +191,14 @@
                 <div class="process__vline-left"></div>
                 <div class="process__vline-right"></div>
     
-                <div class="col-block process__col" data-item="1" data-aos="fade-up">
+                <div class="col-block process__col" data-item="H" data-aos="fade-up">
                     <div class="process__text">
                         <h4>HTML & CSS</h4>
                         <p class=pseudo>none</p>
                     </div>
                 </div>
 
-                <div class="col-block process__col" data-item="2" data-aos="fade-up">
+                <div class="col-block process__col" data-item="J" data-aos="fade-up">
                     <div class="process__text">
                         <h4>javascripts</h4>
                         <p class=pseudo>
@@ -223,7 +223,7 @@
         <!-- innerHTML scripts style -->
         <div class="row" data-aos="fade-up">
             <div class="col-full">
-                <p class="lead">using object.innerHTML to generate table with script style</p>
+                <p class="lead"><br><br>using object.innerHTML to generate table with script style</p>
                 <p style="font-family: consolas">
                     <table id=_table99></table>
                     <script>
@@ -253,7 +253,7 @@
                 <div class="process__vline-left"></div>
                 <div class="process__vline-right"></div>
     
-                <div class="col-block process__col" data-item="1" data-aos="fade-up">
+                <div class="col-block process__col" data-item="H" data-aos="fade-up">
                     <div class="process__text">
                         <h4>HTML & CSS</h4>
 
@@ -272,7 +272,7 @@
                         </p>
                     </div>
                 </div>
-                <div class="col-block process__col" data-item="2" data-aos="fade-up">
+                <div class="col-block process__col" data-item="J" data-aos="fade-up">
                     <div class="process__text">
                         <h4>javascripts</h4>
                         <p class=pseudo>
@@ -300,9 +300,11 @@
         <!-- object-oriented style -->
         <div class="row" data-aos="fade-up">
             <div class="col-full">
-                <p class=lead><br><br>using insertRow() & insertCell() to generate table with size = (9, 9) in dynamic&nbsp; &nbsp; 
-                    <button onclick="callTableFunc(9, 9, 'table99')">Show Table</button>
-                </p>
+                <p class=lead><br><br>using insertRow() & insertCell() to generate table with size = (9, 9) in dynamic&nbsp; &nbsp; </p>
+                <div class="btn-group">
+                    <button class="btn btn-primary" onclick="callTableFunc(9, 9, 'table99')">Show Table</button>
+                    <button class="btn btn-primary" onclick="delTableFunc('table99')">Delete Row</button>
+                </div>
                 <table id="table99"></table>
             </div>
         </div> <!-- end about-desc -->
@@ -315,7 +317,7 @@
                 <div class="process__vline-left"></div>
                 <div class="process__vline-right"></div>
 
-                <div class="col-block process__col" data-item="1" data-aos="fade-up">
+                <div class="col-block process__col" data-item="H" data-aos="fade-up">
                     <div class="process__text">
                         <h4>HTML & CSS</h4>
 
@@ -336,7 +338,7 @@
                     </div>
                 </div>
 
-                <div class="col-block process__col" data-item="2" data-aos="fade-up">
+                <div class="col-block process__col" data-item="J" data-aos="fade-up">
                     <div class="process__text">
                         <h4>javascripts</h4>
 
@@ -369,7 +371,7 @@
     </section> <!-- end s-about -->
 
 
-    <!-- homework 2 Form Check services
+    <!-- homework 2 Form Check
     ================================================== -->
     <section id='hw2' class="s-hw2 light-gray">
 
@@ -383,8 +385,48 @@
         <div class="row" data-aos="fade-up">
             <div class="col-full">
                 <p class="lead">
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse. 
+                Make a form containing the following fields.
                 </p>
+            </div>
+        </div> <!-- end about-desc -->
+
+        <div class="row" data-aos="fade-up">
+            <div class="col-full">
+                <form id=valid_form>
+                    <fieldset>
+                        <legend>Form Check</legend>
+                        <div id=ch_name>
+                            <p class=item>Name: </p>
+                            <input class=text_in type="text" placeholder="王建民" onfocusout="check_name('ch_name')" onfocusin="init('ch_name')"/>
+                            <span class=false><i class="fa fa-times-circle" aria-hidden="true"></i></span>
+                            <span class=true><i class="fa fa-check-circle" aria-hidden="true"></i></span>
+                            <span class=confirm></span>
+                            <p><small>(1.must contain no spaces&nbsp; &nbsp; 
+                                2.at least 2 characters&nbsp; &nbsp; 
+                                3.must be traditional chinese)</small></p>
+                        </div>
+
+                        <div id=pwd>
+                            <p class=item>Password: </p>
+                            <input class=text_in type="text" placeholder="please enter the password" onfocusout="check_pwd('pwd')" onfocusin="init('pwd')"/>
+                            <span class=false><i class="fa fa-times-circle" aria-hidden="true"></i></span>
+                            <span class=true><i class="fa fa-check-circle" aria-hidden="true"></i></span>
+                            <span class=confirm></span>
+                            <p><small>(1.must contain no spaces&nbsp; &nbsp; 
+                                2.at least 2 characters and containing English alphabets, number and special characters [!@#$%^&*]</small></p>
+                        </div>
+                        
+                        <div id=date_time>
+                            <p class=item>Date: </p>
+                            <input class=text_in type="text" placeholder="e.g., 2000/02/29 " onfocusout="check_dt('date_time')" onfocusin="init('date_time')"/>
+                            <span class=false><i class="fa fa-times-circle" aria-hidden="true"></i></span>
+                            <span class=true><i class="fa fa-check-circle" aria-hidden="true"></i></span>
+                            <span class=confirm></span>
+                            <p><small>format: CE year/month/day yyyy/MM/dd</small></p>
+                        </div>
+                    </fieldset>
+                </form>
+
             </div>
         </div> <!-- end about-desc -->
 
@@ -487,6 +529,10 @@
         <!-- star rating -->
         <div class="row" data-aos="fade-up">
 
+            <p class=lead>Create a class object makes the star rating could be callable. 
+                <br>Click the "score" button to start scroing.&nbsp; &nbsp; 
+                <button class=btn onclick="score('rating')">score</button></p>
+            
             <div id="rating">
                 <span class="fa fa-star"></span>
                 <span class="fa fa-star"></span>
@@ -494,7 +540,7 @@
                 <span class="fa fa-star"></span>
                 <span class="fa fa-star"></span>
                 <p class=lead></p>
-            </div>
+            </div>            
 
         </div>
 
@@ -517,6 +563,8 @@
                         <p class=pseudo>
                             <<span>!-- Add icon library --</span>>
                             <br><<span>link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"</span>>
+                            <br>
+                            <br><<span>button onclick="score('rating')"</span>>score<<span>/button</span>>
                             <br>
                             <br><<span>div id=rating</span>>
                             <br>&nbsp; &nbsp; <<span>span class="fa fa-star"</span>></span>
@@ -635,33 +683,168 @@
             </div>
         </div> <!-- end section-header -->
 
-        <div class="row hw4 block-1-4 block-m-1-2 block-mob-full" data-aos="fade-up">
-                
-            <div class="col-block hw4__col ">
-                <div class="hw4__count">129</div>
-                <h5>Awards Received</h5>
-            </div>
-            <div class="col-block hw4__col">
-                <div class="hw4__count">1507</div>
-                <h5>Cups of Coffee</h5>
-            </div>
-            <div class="col-block hw4__col">
-                <div class="hw4__count">108</div>
-                <h5>Projects Completed</h5>
-            </div>
-            <div class="col-block hw4__col">
-                <div class="hw4__count">103</div>
-                <h5>Happy Clients</h5> 
-            </div>
+        <form>
+            <input type="radio" name=1>
+            <input type="radio" name=1>
+            <input type="radio" name=1 checked>
+            <input type="radio" name=1>
 
-        </div> <!-- end stats -->
+        </form>
+
+        <div class="row stats block-1-2 block-m-1-2 block-mob-full" data-aos="fade-up">
+            <!-- animation division -->
+            <div class="col-block stats__col ">
+                <!-- display image -->
+                <a id="_anim_link_newton" target="_blank" rel="noopener noreferrer"><img id="_anim_img_newton" style="width:100%; margin-left: -45px"></a>
+                <br>
+                <!-- animation slider -->
+                <input id="_anim_slider_newton" type="range" style="width:90%;" name="points" min="0" max="1" step="1"
+                    value="0" onchange="anim_newton.set_frame(parseInt(this.value));"></input>
+                <br>
+
+                <button class=btn onclick="anim_newton.slower()">
+                    <i class="fa fa-minus"></i></button>
+                <button class=btn onclick="anim_newton.first_frame()">
+                    <i class="fa fa-fast-backward"></i></button>
+                <button class=btn onclick="anim_newton.previous_frame()">
+                    <i class="fa fa-step-backward"></i></button>
+                <button class=btn onclick="anim_newton.reverse_animation()">
+                    <i class="fa fa-play fa-flip-horizontal"></i></button>
+                <button class=btn onclick="anim_newton.pause_animation()">
+                    <i class="fa fa-pause"></i></button>
+                <button class=btn onclick="anim_newton.play_animation()">
+                    <i class="fa fa-play"></i></button>
+                <button class=btn onclick="anim_newton.next_frame()">
+                    <i class="fa fa-step-forward"></i></button>
+                <button class=btn onclick="anim_newton.last_frame()">
+                    <i class="fa fa-fast-forward"></i></button>
+                <button class=btn onclick="anim_newton.faster()">
+                    <i class="fa fa-plus"></i></button>
+                <form action="#n" name="_anim_loop_select_newton">
+                    <input id=s1 type="radio" name="state" value="once"><label for="s1"><span></span>Once</label>
+                    <input id=s2 type="radio" name="state" value="loop" checked><label for="s2"><span></span>Loop</label>
+                    <input id=s3 type="radio" name="state" value="reflect"><label for="s3"><span></span>Reflect</label>
+                </form>
+
+            </div>
+            <!-- pseudo code -->
+            <div class="col-block stats__col ">
+            <div class="col-full animation__slider">
+
+                <!-- HTML -->
+                <div class="testimonials__slide">
+                    <img src="images/avatars/html.png" alt="Author image" class="testimonials__avatar">
+                    <p class=pseudo>
+                        <<span>!-- Add icon library --</span>>
+                        <br><<span>link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"</span>>
+                        <br>
+                        <br><<span>button onclick="score('rating')"</span>>score<<span>/button</span>>
+                        <br>
+                        <br><<span>div id=rating</span>>
+                        <br>&nbsp; &nbsp; <<span>span class="fa fa-star"</span>></span>
+                        <br>&nbsp; &nbsp; <<span>span class="fa fa-star"</span>></span>
+                        <br>&nbsp; &nbsp; <<span>span class="fa fa-star"</span>></span>
+                        <br>&nbsp; &nbsp; <<span>span class="fa fa-star"</span>></span>
+                        <br>&nbsp; &nbsp; <<span>span class="fa fa-star"</span>></span>
+                        <br><<span>/div</span>>
+                    </p>
+                </div> <!-- end testimonials__slide -->
+
+                <!-- CSS -->
+                <div class="testimonials__slide">
+                        <img src="images/avatars/css.png" alt="Author image" class="testimonials__avatar">
+                        <div class=pseudo>
+                            <a data-toggle=collapse data-target="#anim_style">#rating</a> {
+                            <p id=anim_style class=collapse>
+                            &nbsp; &nbsp; text-align: center;
+                            <br>}
+                            </p>
+
+                            <br><a data-toggle=collapse data-target="#aspan_style">#rating span</a> {
+                            <p id=aspan_style class=collapse>
+                            &nbsp; &nbsp; font-size: 50px;
+                            <br>&nbsp; &nbsp; padding: 0 10px;
+                            <br>&nbsp; &nbsp; color: rgb(12, 11, 11);
+                            <br>&nbsp; &nbsp; opacity: .5;
+                            <br>}
+                            </p>
+                            
+                            <br><a data-toggle=collapse data-target="#aspan_hover_style">#rating span.hover</a> {
+                            <p id=aspan_hover_style class=collapse>
+                            &nbsp; &nbsp; color: #cc147f;
+                            <br>&nbsp; &nbsp; opacity: 1;
+                            <br>}
+                            </p>
+
+                        </div>
+                </div> <!-- end testimonials__slide -->
+
+                <div class="testimonials__slide">
+                        <img src="images/avatars/javascript.png" alt="Author image" class="testimonials__avatar">
+                        <div class=pseudo>
+                            // Star rating class
+                            <br><a data-toggle=collapse data-target="#arating_constructor">function StarRating()</a> {
+                            <p id=arating_constructor class=collapse>&nbsp; &nbsp; // constructor
+                            <br>&nbsp; &nbsp; this.init();
+                            <br>};
+                            </p>
+                            
+                            <br><a data-toggle=collapse data-target="#arating_init">StarRating.prototype.init = function()</a> {
+                            <p id=arating_init class=collapse>&nbsp; &nbsp; // initialize
+                            <br>&nbsp; &nbsp; this.stars = document.querySelectorAll('#rating span');
+                            <br>&nbsp; &nbsp; for (var i = 0; i < this.stars.length; i++) {
+                            <br>&nbsp; &nbsp; &nbsp; &nbsp; this.stars[i].setAttribute('data-count', i);
+                            <br>&nbsp; &nbsp; &nbsp; &nbsp; this.stars[i].addEventListener('click', this.enterStarListener.bind(this));
+                            <br>&nbsp; &nbsp; }
+                            <br>&nbsp; &nbsp; document.querySelector('#rating').addEventListener('click', this.clickStarListener.bind(this));
+                            <br>};
+                            </p>
+
+                            <br><a data-toggle=collapse data-target="#arating_listener">StarRating.prototype.enterStarListener = function(e)</a> {
+                            <p id=arating_listener class=collapse>&nbsp; &nbsp; // This method is fired when a user hovers over a single star
+                            <br>&nbsp; &nbsp; // :param: e
+                            <br>&nbsp; &nbsp; this.fillStarsUpToElement(e.target);
+                            <br>};
+                            </p>
+
+                            <br><a data-toggle=collapse data-target="#arating_click">StarRating.prototype.clickStarListener = function(e)</a> {
+                            <p id=arating_click class=collapse>&nbsp; &nbsp; // This method is fired when a user clicks on a single star
+                            <br>&nbsp; &nbsp; // :param: e
+                            <br>&nbsp; &nbsp; var score = Number(e.target.getAttribute('data-count')) + 1;
+                            <br>&nbsp; &nbsp; this.msg.innerHTML = "You give this article rating of " + score + " out of 5.";
+                            <br>};
+                            </p>
+
+                            <br><a data-toggle=collapse data-target="#arating_fill">StarRating.prototype.fillStarsUpToElement = function(el)</a> {
+                            <p id=arating_fill class=collapse>&nbsp; &nbsp; // Fill the star ratings up to a specific position.
+                            <br>&nbsp; &nbsp; // :param: el
+                            <br>&nbsp; &nbsp; for (var i = 0; i < this.stars.length; i++) {
+                            <br>&nbsp; &nbsp; &nbsp; &nbsp; if (el == null || this.stars[i].getAttribute('data-count') > el.getAttribute('data-count')) {
+                            <br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; // Remove old hover states:
+                            <br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; this.stars[i].classList.remove('hover');
+                            <br>
+                            <br>&nbsp; &nbsp; &nbsp; &nbsp; } else {
+                            <br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; // Add new hover states:
+                            <br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; this.stars[i].classList.add('hover');
+                            <br>&nbsp; &nbsp; &nbsp; &nbsp; }
+                            <br>&nbsp; &nbsp; }
+                            <br>};
+                            </p>
+
+                            <br>// Run:
+                            <br>new StarRating();
+                        </div>
+                    </div> <!-- end testimonials__slide -->
+            </div>
+        </div>
+        </div>
 
     </section> <!-- end s-stats -->
 
 
-    <!-- homework 5 contact
+    <!-- homework 5 Calendar
     ================================================== -->
-    <section id="hw5" class="s-contact">
+    <section id="hw5" class="s-hw5">
 
         <div class="row section-header" data-aos="fade-up">
             <div class="col-full">
@@ -794,6 +977,25 @@ Copyright &copy;<script>document.write(new Date().getFullYear());</script> All r
     <script src="js/plugins.js"></script>
     <script src="js/main.js"></script>
     <script src="js/homework.js"></script>
+    <script>
+		/* Instantiate the Animation class. */
+		/* The IDs given should match those used in the template above. */
+		(function () {
+            var link_id = "_anim_link_newton"
+			var img_id = "_anim_img_newton";
+            var slider_id = "_anim_slider_newton";
+			var loop_select_id = "_anim_loop_select_newton";
+			var frames = new Array(33);
+
+			for (var i = 0; i < 33; i++) {
+				frames[i] = "images/newton/frame" + ("0000000" + i).slice(-7) + ".png";
+			}
+
+			/* set a timeout to make sure all the above elements are created before
+			   the object is initialized. */
+			setTimeout(function () {anim_newton = new Animation(frames, img_id, link_id, slider_id, 300, loop_select_id);}, 0);
+		})()
+	</script>
 
 </body>
 
