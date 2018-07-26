@@ -394,10 +394,13 @@
             <div class="col-full">
                 <form id=valid_form>
                     <fieldset>
+                        
                         <legend>Form Check</legend>
+                        
+                        <!-- chinese name -->
                         <div id=ch_name>
                             <p class=item>Name: </p>
-                            <input class=text_in type="text" placeholder="王建民" onfocusout="check_name('ch_name')" onfocusin="init('ch_name')"/>
+                            <input class=text_in type="text" placeholder="王建民" onfocusout="check_name('ch_name')" onfocusin="init('ch_name')"></input>
                             <span class=false><i class="fa fa-times-circle" aria-hidden="true"></i></span>
                             <span class=true><i class="fa fa-check-circle" aria-hidden="true"></i></span>
                             <span class=confirm></span>
@@ -405,10 +408,13 @@
                                 2.at least 2 characters&nbsp; &nbsp; 
                                 3.must be traditional chinese)</small></p>
                         </div>
-
+                        
+                        <!-- password -->
                         <div id=pwd>
                             <p class=item>Password: </p>
-                            <input class=text_in type="text" placeholder="please enter the password" onfocusout="check_pwd('pwd')" onfocusin="init('pwd')"/>
+                            <input class=text_in type="password" placeholder="please enter the password" onfocusout="check_pwd('pwd')" onfocusin="init('pwd')"/>
+                            <button id=showpwd type=button onclick="show_password('pwd')" style="display:inline"><i class="fas fa-eye"></i></button>
+                            <button id=hidepwd type=button onclick="show_password('pwd')"><i class="far fa-eye-slash"></i></button>
                             <span class=false><i class="fa fa-times-circle" aria-hidden="true"></i></span>
                             <span class=true><i class="fa fa-check-circle" aria-hidden="true"></i></span>
                             <span class=confirm></span>
@@ -416,6 +422,7 @@
                                 2.at least 2 characters and containing English alphabets, number and special characters [!@#$%^&*]</small></p>
                         </div>
                         
+                        <!-- date time format -->
                         <div id=date_time>
                             <p class=item>Date: </p>
                             <input class=text_in type="text" placeholder="e.g., 2000/02/29 " onfocusout="check_dt('date_time')" onfocusin="init('date_time')"/>
@@ -424,6 +431,7 @@
                             <span class=confirm></span>
                             <p><small>format: CE year/month/day yyyy/MM/dd</small></p>
                         </div>
+
                     </fieldset>
                 </form>
 
@@ -431,26 +439,80 @@
         </div> <!-- end about-desc -->
 
         <div class="row services-list block-1-3 block-m-1-2 block-tab-full">
-
+            
+            <!-- html & css -->
             <div class="col-block service-item " data-aos="fade-up">
                 <div class="service-icon service-icon--brand-identity">
                     <i class="icon-tv"></i>
                 </div>
                 <div class="service-text">
-                    <h3 class="h4">Brand Identity</h3>
-                    <p>Nemo cupiditate ab quibusdam quaerat impedit magni. Earum suscipit ipsum laudantium. 
-                    Quo delectus est. Maiores voluptas ab sit natus veritatis ut. Debitis nulla cumque veritatis.
-                    Sunt suscipit voluptas ipsa in tempora esse soluta sint.
-                    </p>
+                    <h3 class="h4">HTML & CSS</h3>
+                    <div class=pseudo>
+                        <!-- css -->
+                        <a data-toggle=collapse data-target=#form_style><<span>!-- css --</span>></a>
+                        <p id=form_style class=collapse>
+                            <<span>style</span>>
+                            <br>&nbsp; &nbsp; true, false {
+                            <br>&nbsp; &nbsp; &nbsp; &nbsp; display: none;
+                            <br>&nbsp; &nbsp; }
+                            <br><<span>/style</span>>        
+                        </p>
+
+                        <!-- chinese name -->
+                        <br><a data-toggle=collapse data-target=#chname><<span>!-- chinese name --</span>></a>
+                        <p id=chname class=collapse>
+                            <<span>div id=ch_name</span>>
+                            <br>&nbsp; &nbsp; <<span>p class=item>Name: <</span>/p>
+                            <br>&nbsp; &nbsp; <<span>input class=text_in type="text" placeholder="王建民" onfocusout="check_name('ch_name')" onfocusin="init('ch_name')"><</span>/input>
+                            <br>&nbsp; &nbsp; <<span>span class=false><</span>i class="fa fa-times-circle" aria-hidden="true"><<span>/i><</span>/span>
+                            <br>&nbsp; &nbsp; <<span>span class=true><</span>i class="fa fa-check-circle" aria-hidden="true"><<span>/i><</span>/span>
+                            <br>&nbsp; &nbsp; <<span>span class=confirm><</span>/span>
+                            <br>&nbsp; &nbsp; <<span>p><</span>small>(1.must contain no spaces&nbsp; &nbsp; 
+                            <br>&nbsp; &nbsp; &nbsp; &nbsp; 2.at least 2 characters&nbsp; &nbsp; 
+                            <br>&nbsp; &nbsp; &nbsp; &nbsp; 3.must be traditional chinese)<<span>/small><</span>/p>
+                            <br><<span>/div></span>
+                        </p>
+
+                        <!-- password -->
+                        <br><a data-toggle=collapse data-target=#pwdsection><<span>!-- password --</span>></a>
+                        <p id=pwdsection class=collapse>
+                            <<span>div id=pwd</span>>
+                            <br>&nbsp; &nbsp; <<span>p class=item>Password: <</span>/p>
+                            <br>&nbsp; &nbsp; <<span>input class=text_in type="password" placeholder="please enter the password" onfocusout="check_pwd('pwd')" onfocusin="init('pwd')"/></span>
+                            <br>&nbsp; &nbsp; <<span>button id=showpwd type=button onclick="show_password('pwd')" style="display:inline"><</span>i class="fas fa-eye"><<span>/i><</span>/button>
+                            <br>&nbsp; &nbsp; <<span>button id=hidepwd type=button onclick="show_password('pwd')"><</span>i class="far fa-eye-slash"><<span>/i><</span>/button>
+                            <br>&nbsp; &nbsp; <<span>span class=false><</span>i class="fa fa-times-circle" aria-hidden="true"><<span>/i><</span>/span>
+                            <br>&nbsp; &nbsp; <<span>span class=true><</span>i class="fa fa-check-circle" aria-hidden="true"><<span>/i><</span>/span>
+                            <br>&nbsp; &nbsp; <<span>span class=confirm><</span>/span>
+                            <br>&nbsp; &nbsp; <<span>p><</span>small>(1.must contain no spaces&nbsp; &nbsp; 
+                            <br>&nbsp; &nbsp; &nbsp; &nbsp; 2.at least 2 characters and containing English alphabets, number and special characters [!@#$%^&*]<<span>/small><</span>/p>
+                            <br><<span>/div></span>
+                        </p>
+
+                        <!-- datetime -->
+                        <br><a data-toggle=collapse data-target=#dtsection><<span>!-- datetime --</span>></a>
+                        <p id=dtsection class=collapse>
+                            <<span>div id=date_time</span>>
+                            <br>&nbsp; &nbsp; <<span>p class=item>Date: <</span>/p>
+                            <br>&nbsp; &nbsp; <<span>input class=text_in type="text" placeholder="e.g., 2000/02/29 " onfocusout="check_dt('date_time')" onfocusin="init('date_time')"/></span>
+                            <br>&nbsp; &nbsp; <<span>span class=false><</span>i class="fa fa-times-circle" aria-hidden="true"><<span>/i><</span>/span>
+                            <br>&nbsp; &nbsp; <<span>span class=true><</span>i class="fa fa-check-circle" aria-hidden="true"><<span>/i><</span>/span>
+                            <br>&nbsp; &nbsp; <<span>span class=confirm><</span>/span>
+                            <br>&nbsp; &nbsp; <<span>p><</span>small>format: CE year/month/day yyyy/MM/dd<<span>/small><</span>/p>
+                            <br><<span>/div></span>
+                        </p>
+
+                    </div>
                 </div>
             </div>
 
+            <!-- javascript validation & initialized -->
             <div class="col-block service-item" data-aos="fade-up">
                 <div class="service-icon  service-icon--illustration">
                     <i class="icon-group"></i>
                 </div>
                 <div class="service-text">
-                    <h3 class="h4">Illustration</h3>
+                    <h3 class="h4">javascripts</h3>
                     <p>Nemo cupiditate ab quibusdam quaerat impedit magni. Earum suscipit ipsum laudantium. 
                     Quo delectus est. Maiores voluptas ab sit natus veritatis ut. Debitis nulla cumque veritatis.
                     Sunt suscipit voluptas ipsa in tempora esse soluta sint.
@@ -463,7 +525,7 @@
                     <i class="icon-earth"></i>
                 </div>  
                 <div class="service-text">
-                    <h3 class="h4">Web Design</h3>
+                    <h3 class="h4">javascripts</h3>
                     <p>Nemo cupiditate ab quibusdam quaerat impedit magni. Earum suscipit ipsum laudantium. 
                     Quo delectus est. Maiores voluptas ab sit natus veritatis ut. Debitis nulla cumque veritatis.
                     Sunt suscipit voluptas ipsa in tempora esse soluta sint.
@@ -476,7 +538,7 @@
                     <i class="icon-cube"></i>
                 </div>
                 <div class="service-text">
-                    <h3 class="h4">Product Strategy</h3>
+                    <h3 class="h4">javascripts</h3>
                     <p>Nemo cupiditate ab quibusdam quaerat impedit magni. Earum suscipit ipsum laudantium. 
                     Quo delectus est. Maiores voluptas ab sit natus veritatis ut. Debitis nulla cumque veritatis.
                     Sunt suscipit voluptas ipsa in tempora esse soluta sint.
@@ -489,7 +551,7 @@
                     <i class="icon-window"></i>
                 </div>
                 <div class="service-text">
-                    <h3 class="h4">UI/UX Design</h3>
+                    <h3 class="h4">javascripts</h3>
                     <p>Nemo cupiditate ab quibusdam quaerat impedit magni. Earum suscipit ipsum laudantium. 
                     Quo delectus est. Maiores voluptas ab sit natus veritatis ut. Debitis nulla cumque veritatis.
                     Sunt suscipit voluptas ipsa in tempora esse soluta sint.
@@ -502,7 +564,7 @@
                     <i class="icon-lego-block"></i>
                 </div>
                 <div class="service-text">
-                    <h3 class="h4">Mobile Development</h3>
+                    <h3 class="h4">javascripts</h3>
                     <p>Nemo cupiditate ab quibusdam quaerat impedit magni. Earum suscipit ipsum laudantium. 
                     Quo delectus est. Maiores voluptas ab sit natus veritatis ut. Debitis nulla cumque veritatis.
                     Sunt suscipit voluptas ipsa in tempora esse soluta sint.
