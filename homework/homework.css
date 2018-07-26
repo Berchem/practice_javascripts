@@ -1,0 +1,136 @@
+.pseudo {
+    font-family: consolas;
+}
+
+/* homework 1 */
+table, td {
+    border: 1px rgb(0, 0, 0) solid;
+    border-collapse: collapse;
+    padding: 5px;
+    margin-right: 10px;
+    text-align: center;
+    font-family: consolas;
+}
+
+/* homework 2 */
+#valid_form, #valid_form input, #valid_form p {
+    margin-bottom: 0;
+}
+
+#valid_form div {
+    margin-bottom: 3rem;
+}
+
+.item {
+    width:10rem;
+    float: left;
+}
+
+.text_in {
+    width: 30rem;
+    padding-left: 1rem;
+}
+
+.true, .false {
+    display: none;
+}
+#showpwd, #hidepwd {
+    height: 2rem;
+    width: 2rem;
+    margin-left: -4rem;
+    background-color: #d4d4d4;
+    opacity: 0.7;
+    border: none;
+    display: none;
+}
+
+/* homework 3 */
+#rating {
+    text-align: center;
+}
+            
+#rating span {
+    font-size: 50px;
+    padding: 0 10px;
+    color: rgb(12, 11, 11);
+    opacity: .5;
+}
+            
+#rating span.hover {
+    color: #cc147f;
+    opacity: 1;
+}
+
+#scoring_msg {
+    text-align: center;
+}
+
+/* homework 4 */
+/* The slider itself */
+#_anim_slider_newton {
+    /* background: #4c7f99; */
+    margin-bottom: 20px;
+	border-radius: 3px;
+	-webkit-appearance: none;  /* Override default CSS styles */
+    /* appearance: none; */
+ 	width: 100%; /* Full-width */
+	height: 3px; /* Specified height */
+	background: #ffffff; /* Grey background */
+    outline: none; /* Remove outline */
+    opacity: 0.66; /* Set transparency (for mouse-over effects on hover) */
+    -webkit-transition: .2s; /* 0.2 seconds transition on hover */
+    transition: opacity .2s;
+}
+
+/* Mouse-over effects */
+#_anim_slider_newton:hover {
+	opacity: 1; /* Fully shown on mouse-over */
+}
+
+/* The slider handle (use -webkit- (Chrome, Opera, Safari, Edge) and -moz- (Firefox) to override default look) */ 
+#_anim_slider_newton::-webkit-slider-thumb {
+	-webkit-appearance: none; /* Override default look */
+	/* appearance: none; */
+	width: 21px; /* Set a specific slider handle width */
+	height: 12px; /* Slider handle height */
+    border-radius: 25%;
+    /* transform: rotate(45deg); */
+	background: #f7df1e; /* Green background */
+	cursor: pointer; /* Cursor on hover */
+}
+
+#_anim_slider_newton::-moz-range-thumb {
+	width: 5px; /* Set a specific slider handle width */
+	height: 5px; /* Slider handle height */
+	background: #4c7f99; /* Green background */
+	cursor: pointer; /* Cursor on hover */
+}
+
+input[type="radio"] {
+    display:none;
+}
+
+input[type="radio"] + label {
+	float: left;
+	margin-left: 14%;
+    color:#f2f2f2;
+    font-family:Arial, sans-serif;
+}
+
+input[type="radio"] + label span {
+    display:inline-block;
+    width:19px;
+    height:19px;
+    margin:-2px 10px 0 0;
+    vertical-align:middle;
+	background:url(../images/check_radio_sheet.png) left top no-repeat; /* -38px top no-repeat;*/
+	/* background:url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/210284/check_radio_sheet.png) -38px top no-repeat; */
+    cursor:pointer;
+}
+
+input[type="radio"]:checked + label span {
+	background:url(../images/check_radio_sheet.png) -19px top no-repeat;
+    /* background:url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/210284/check_radio_sheet.png) -57px top no-repeat; */
+}
+
+/* homework 5 */
