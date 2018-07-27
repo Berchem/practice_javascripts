@@ -153,8 +153,8 @@
     * ------------------------------------------------------ */
     var clStatCount = function() {
         
-        var statSection = $(".s-stats"),
-            stats = $(".stats__count");
+        var statSection = $(".s-hw4"),
+            stats = $(".hw4__count");
 
         statSection.waypoint({
 
@@ -216,6 +216,25 @@
             dots: true,
             infinite: true,
             slidesToShow: 2,
+            slidesToScroll: 1,
+            pauseOnFocus: false,
+            autoplaySpeed: 1500,
+            responsive: [
+                {
+                    breakpoint: 900,
+                    settings: {
+                        slidesToShow: 1,
+                        slidesToScroll: 1
+                    }
+                }
+            ]
+        });
+
+        $('.animation__slider').slick({
+            arrows: false,
+            dots: true,
+            infinite: true,
+            slidesToShow: 1,
             slidesToScroll: 1,
             pauseOnFocus: false,
             autoplaySpeed: 1500,

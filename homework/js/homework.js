@@ -44,7 +44,7 @@ function display_error(id) {
 	var ico_false
 	[, , ico_false, , ] = validation(id)
 	ico_false.style.display = "inline"
-    ico_false.style.color = "red"
+    ico_false.style.color = "#cc147f"
 	vaild.innerHTML = "error"
 }
 
@@ -52,8 +52,20 @@ function display_correct(id) {
 	var ico_true
 	[, , , ico_true, ] = validation(id)
 	ico_true.style.display = "inline"
-    ico_true.style.color = "green"
+    ico_true.style.color = "#26bfb5"
 	vaild.innerHTML = "correct"
+}
+
+function show_password(id){
+	this.division = document.getElementById(id)
+	this.text = division.querySelector(".text_in")
+	this.showpwd = division.querySelector('#showpwd');
+	this.hidepwd = division.querySelector('#hidepwd');
+	
+	this.text.type = (this.text.type == "password") ? "text" : "password"
+	var temp = this.showpwd.style.display
+	this.showpwd.style.display = this.hidepwd.style.display
+	this.hidepwd.style.display = temp
 }
 
 function check_name(id) {
@@ -82,14 +94,13 @@ function check_pwd(id) {
 	var text
 	[, text, , , ] = validation(id)
 
-    var logic = 0
     if (text.length < 6) {
         display_error(id)
 
 	} else {
 		var spec = new RegExp("[!@#$%^&*]")
-		var num = new RegExp("[0-9]]")
-		if (spec.test(text) & spec.test(text)){
+		var num = new RegExp("[0-9]")
+		if (spec.test(text) && num.test(text)){
 			display_correct(id)
 		} else{
 			display_error(id)
@@ -318,4 +329,62 @@ Animation.prototype.reverse_animation = function () {
 }
 
 // homework 5
+function clearOption(...id){
+	for (var i = 0; i < id.length; i++){
+		var opt = document.getElementById(id[i])
+		while (opt.length - 1 > 0)
+			opt.remove(1)
+	}
+}
 
+function generateYMD(id, start, end){
+	// claerOption(id)
+	var i, node, opt, sect = document.getElementById(id)
+	for (i = start; i <= end; i++){
+		opt = document.createElement("OPTION");
+    	opt.setAttribute("value", i);
+    	node = document.createTextNode(i);
+    	opt.appendChild(node);
+    	sect.appendChild(opt);
+	}
+}
+
+function getmonths(y){
+	return new Date(y, 0, 0).getMonth() + 1
+}
+
+function getdays(y, m){
+	return new Date(y, m, 0).getDate()
+}
+
+function parsing_year(id_y, id_m, id_d){
+	clearOption(id_y, id_m, id_d)
+	generateYMD(id_y, 2010, 2020)
+	
+}
+
+function parsing_month(id_y, id_m, id_d){
+	clearOption(id_m, id_d)
+	generateYMD(id_m, 1, getmonths(getval(id_y)))
+}
+
+function parsing_date(id_y, id_m, id_d){
+	clearOption(id_d)
+	generateYMD(id_d, 1, getdays(getval(id_y), getval(id_m)))
+}
+
+function getval(id){
+	var input = document.getElementById(id)
+	return input.options[input.selectedIndex].value
+}
+
+function getSelect(id){
+	var val = getval(id)
+	var output = document.getElementById(id.replace("inputGroup", ""))
+	if ((new RegExp("[A-Z]")).test(val))
+		output.innerHTML = "--"
+	else
+		output.innerHTML = val
+}
+
+// Yinhun0999@gmail.com
