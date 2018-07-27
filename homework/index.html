@@ -13,6 +13,9 @@
     ================================================== -->
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
+    <!-- Optional theme -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">  
+
     <!-- CSS
     ================================================== -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
@@ -29,6 +32,7 @@
     <script src="js/modernizr.js"></script>
     <script src="js/pace.min.js"></script>
     <script src="js/homework.js"></script>
+
 
     <!-- jsicons
     ================================================== -->
@@ -459,7 +463,7 @@
                         </p>
 
                         <!-- chinese name -->
-                        <br><a data-toggle=collapse data-target=#chname><<span>!-- chinese name --</span>></a>
+                        <br><br><a data-toggle=collapse data-target=#chname><<span>!-- chinese name --</span>></a>
                         <p id=chname class=collapse>
                             <<span>div id=ch_name</span>>
                             <br>&nbsp; &nbsp; <<span>p class=item>Name: <</span>/p>
@@ -474,7 +478,7 @@
                         </p>
 
                         <!-- password -->
-                        <br><a data-toggle=collapse data-target=#pwdsection><<span>!-- password --</span>></a>
+                        <br><br><a data-toggle=collapse data-target=#pwdsection><<span>!-- password --</span>></a>
                         <p id=pwdsection class=collapse>
                             <<span>div id=pwd</span>>
                             <br>&nbsp; &nbsp; <<span>p class=item>Password: <</span>/p>
@@ -488,9 +492,9 @@
                             <br>&nbsp; &nbsp; &nbsp; &nbsp; 2.at least 2 characters and containing English alphabets, number and special characters [!@#$%^&*]<<span>/small><</span>/p>
                             <br><<span>/div></span>
                         </p>
-
+                        
                         <!-- datetime -->
-                        <br><a data-toggle=collapse data-target=#dtsection><<span>!-- datetime --</span>></a>
+                        <br><br><a data-toggle=collapse data-target=#dtsection><<span>!-- datetime --</span>></a>
                         <p id=dtsection class=collapse>
                             <<span>div id=date_time</span>>
                             <br>&nbsp; &nbsp; <<span>p class=item>Date: <</span>/p>
@@ -513,62 +517,176 @@
                 </div>
                 <div class="service-text">
                     <h3 class="h4">javascripts</h3>
-                    <p>Nemo cupiditate ab quibusdam quaerat impedit magni. Earum suscipit ipsum laudantium. 
-                    Quo delectus est. Maiores voluptas ab sit natus veritatis ut. Debitis nulla cumque veritatis.
-                    Sunt suscipit voluptas ipsa in tempora esse soluta sint.
-                    </p>
+                    <div class=pseudo>
+                        // get elements
+                        <br><a data-toggle=collapse data-target=#validf>function validation(id) </a>{
+                        <p id=validf class=collapse>
+                            <br>&nbsp; &nbsp; this.division = document.getElementById(id)
+                            <br>&nbsp; &nbsp; this.text = division.querySelector(".text_in").value
+                            <br>&nbsp; &nbsp; this.ico_false = division.querySelector(".false")
+                            <br>&nbsp; &nbsp; this.ico_true = division.querySelector(".true")
+                            <br>&nbsp; &nbsp; this.vaild = division.querySelector(".confirm")
+                            <br>&nbsp; &nbsp; return [division, text, ico_false, ico_true, vaild] 
+                            <br>}
+                        </p>
+                        <br>
+                        <br>// clear message
+                        <br><a data-toggle=collapse data-target=#initf>function init(id) </a>{
+                        <p id=initf class=collapse>
+                            <br>&nbsp; &nbsp; var division, text, ico_false, ico_true, vaild
+                            <br>&nbsp; &nbsp; [, , ico_false, ico_true, vaild] = validation(id)
+                            <br>&nbsp; &nbsp; vaild.innerHTML = ""
+                            <br>&nbsp; &nbsp; ico_false.style.display = "none"
+                            <br>&nbsp; &nbsp; ico_true.style.display = "none"
+                            <br>}
+                        </p>
+                    </div>
                 </div>
             </div>
 
+            <!-- display message & password -->
             <div class="col-block service-item" data-aos="fade-up">
                 <div class="service-icon  service-icon--web-design">
                     <i class="icon-earth"></i>
                 </div>  
                 <div class="service-text">
                     <h3 class="h4">javascripts</h3>
-                    <p>Nemo cupiditate ab quibusdam quaerat impedit magni. Earum suscipit ipsum laudantium. 
-                    Quo delectus est. Maiores voluptas ab sit natus veritatis ut. Debitis nulla cumque veritatis.
-                    Sunt suscipit voluptas ipsa in tempora esse soluta sint.
-                    </p>
+                    <div class=pseudo>
+                        // display error message
+                        <br><a data-toggle=collapse data-target=#derror>function display_error(id) </a>{
+                            <p id=derror class=collapse>
+                            <br>&nbsp; &nbsp; var ico_false
+                            <br>&nbsp; &nbsp; [, , ico_false, , ] = validation(id)
+                            <br>&nbsp; &nbsp; ico_false.style.display = "inline"
+                            <br>&nbsp; &nbsp; ico_false.style.color = "#cc147f"
+                            <br>&nbsp; &nbsp; vaild.innerHTML = "error"
+                            <br>}
+                        </p>
+                        <br>
+                        <br>// display correct message
+                        <br><a data-toggle=collapse data-target=#dcorrect>function display_correct(id) </a>{
+                        <p id=dcorrect class=collapse>
+                            <br>&nbsp; &nbsp; var ico_true
+                            <br>&nbsp; &nbsp; [, , , ico_true, ] = validation(id)
+                            <br>&nbsp; &nbsp; ico_true.style.display = "inline"
+                            <br>&nbsp; &nbsp; ico_true.style.color = "#26bfb5"
+                            <br>&nbsp; &nbsp; vaild.innerHTML = "correct"
+                            <br>}
+                        </p>
+                        <br>
+                        <br>// hide or show password
+                        <br><a data-toggle=collapse data-target=#hide_show>function show_password(id) </a>{
+                        <p id=hide_show class=collapse>
+                            <br>&nbsp; &nbsp; this.division = document.getElementById(id)
+                            <br>&nbsp; &nbsp; this.text = division.querySelector(".text_in")
+                            <br>&nbsp; &nbsp; this.showpwd = division.querySelector('#showpwd');
+                            <br>&nbsp; &nbsp; this.hidepwd = division.querySelector('#hidepwd');
+                            <br>
+                            <br>&nbsp; &nbsp; this.text.type = (this.text.type == "password") ? "text" : "password"
+                            <br>&nbsp; &nbsp; var temp = this.showpwd.style.display
+                            <br>&nbsp; &nbsp; this.showpwd.style.display = this.hidepwd.style.display
+                            <br>&nbsp; &nbsp; this.hidepwd.style.display = temp
+                            <br>}
+                        </p>
+                    </div>
                 </div>
             </div>
-
+            
+            <!-- chinese name -->
             <div class="col-block service-item" data-aos="fade-up">
                 <div class="service-icon service-icon--product-strategy">
                     <i class="icon-cube"></i>
                 </div>
                 <div class="service-text">
                     <h3 class="h4">javascripts</h3>
-                    <p>Nemo cupiditate ab quibusdam quaerat impedit magni. Earum suscipit ipsum laudantium. 
-                    Quo delectus est. Maiores voluptas ab sit natus veritatis ut. Debitis nulla cumque veritatis.
-                    Sunt suscipit voluptas ipsa in tempora esse soluta sint.
-                    </p>
+                    <div class=pseudo>
+                        // chinese name
+                        <br><a data-toggle=collapse data-target=#chcht>function check_name(id) </a>{
+                        <p id=chcht class=collapse>
+                            <br>var text
+                            <br>[, text, , , ] = validation(id)
+                            <br>var logic = 0
+                            <br>&nbsp; if (text.length < 2) {
+                            <br>&nbsp; &nbsp; display_error(id)
+                            <br>
+                            <br>&nbsp; } else {
+                            <br>&nbsp; &nbsp; for(var i = 0; i < text.length; i++) 
+                            <br>&nbsp; &nbsp; &nbsp; if(text.charCodeAt(i) < 0x4E00 || text.charCodeAt(i) > 0x9FA5) 
+                            <br>&nbsp; &nbsp; &nbsp; &nbsp; logic += 1
+                            <br>&nbsp; &nbsp; if (logic > 0) {
+                            <br>&nbsp; &nbsp; &nbsp; display_error(id)
+                            <br>&nbsp; &nbsp; } else {
+                            <br>&nbsp; &nbsp; &nbsp; display_correct(id)
+                            <br>&nbsp; &nbsp; } 
+                            <br>&nbsp; } 
+                            <br>}
+                        </p>
+                    </div>
                 </div>
             </div>
 
+            <!-- password -->
             <div class="col-block service-item" data-aos="fade-up">
                 <div class="service-icon  service-icon--ui-design">
                     <i class="icon-window"></i>
                 </div>
                 <div class="service-text">
                     <h3 class="h4">javascripts</h3>
-                    <p>Nemo cupiditate ab quibusdam quaerat impedit magni. Earum suscipit ipsum laudantium. 
-                    Quo delectus est. Maiores voluptas ab sit natus veritatis ut. Debitis nulla cumque veritatis.
-                    Sunt suscipit voluptas ipsa in tempora esse soluta sint.
-                    </p>
+                    <div class=pseudo>
+                        // password
+                        <br><a data-toggle=collapse data-target=#chpwd>function check_pwd(id) </a>{
+                        <p id=chpwd class=collapse>
+                            <br>var text
+                            <br>[, text, , , ] = validation(id)
+                            <br>
+                            <br>&nbsp; if (text.length < 6) {
+                            <br>&nbsp; &nbsp; display_error(id)
+                            <br>
+                            <br>&nbsp; } else {
+                            <br>&nbsp; &nbsp; var spec = new RegExp("[!@#$%^&*]")
+                            <br>&nbsp; &nbsp; var num = new RegExp("[0-9]")
+                            <br>&nbsp; &nbsp; if (spec.test(text) && num.test(text)){
+                            <br>&nbsp; &nbsp; &nbsp; display_error(id)
+                            <br>&nbsp; &nbsp; } else {
+                            <br>&nbsp; &nbsp; &nbsp; display_correct(id)
+                            <br>&nbsp; &nbsp; } 
+                            <br>&nbsp; } 
+                            <br>}
+                        </p>
+                    </div>
                 </div>
             </div>
-    
+
+            <!-- datetime -->
             <div class="col-block service-item" data-aos="fade-up">
                 <div class="service-icon service-icon--mobile-dev">
                     <i class="icon-lego-block"></i>
                 </div>
                 <div class="service-text">
                     <h3 class="h4">javascripts</h3>
-                    <p>Nemo cupiditate ab quibusdam quaerat impedit magni. Earum suscipit ipsum laudantium. 
-                    Quo delectus est. Maiores voluptas ab sit natus veritatis ut. Debitis nulla cumque veritatis.
-                    Sunt suscipit voluptas ipsa in tempora esse soluta sint.
-                    </p>
+                    <div class=pseudo>
+                        // datetime
+                        <br><a data-toggle=collapse data-target=#chdt>function check_dt(id) </a>{
+                        <p id=chdt class=collapse>
+                            <br>&nbsp; var text, vaild
+                            <br>&nbsp; [, text, , , vaild] = validation(id)
+                            <br>&nbsp; var yyyy, mm, dd, y, m, d
+                            <br>&nbsp; [yyyy, mm, dd] = text.split('/')
+                            <br>&nbsp; date_input = new Date(text)
+                            <br>&nbsp; y = date_input.getFullYear()
+                            <br>&nbsp; m = date_input.getMonth() + 1
+                            <br>&nbsp; d = date_input.getDate()
+                            <br>
+                            <br>&nbsp; if (Number(yyyy) == y & Number(mm) == m & Number(dd) == d){
+                            <br>&nbsp; &nbsp; display_correct(id)
+                            <br>&nbsp; } else {
+                            <br>&nbsp; &nbsp; display_correct(id)
+                            <br>&nbsp; } 
+                            <br>}
+                        </p>
+                    </div>
+
+
                 </div>
             </div>
 
@@ -797,7 +915,7 @@
                 <div class="testimonials__slide">
                     <img src="images/avatars/html.png" alt="Author image" class="testimonials__avatar">
                     <p class=pseudo>
-                        <<span>!-- Add icon library --</span>>
+                        <<span>button class=btn onclick="anim.slower()"></span>
                         <br><<span>link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"</span>>
                         <br>
                         <br><<span>button onclick="score('rating')"</span>>score<<span>/button</span>>
@@ -914,59 +1032,39 @@
                 <h1 class="display-1 display-1--light">Calendar</h1>
             </div>
         </div> <!-- end section-header -->
-
+        
         <div class="row">
 
-            <div class="col-full contact-main" data-aos="fade-up">
-                <p>
-                <a href="mailto:#0" class="contact-email">hello@transcend-studio.com</a>
-                <span class="contact-number">+1 (917) 123 456  /  +1 (917) 333 987</span>
-                </p>
-            </div> <!-- end contact-main -->
+            <div class="row" data-aos="fade-up">
+
+                <p class=lead>Create a calendar 2010 - 2020</p>
+            </div>
 
         </div> <!-- end row -->
-
         <div class="row">
-
-            <div class="col-five tab-full contact-secondary" data-aos="fade-up">
-                <h3 class="subhead subhead--light">Where To Find Us</h3>
-
-                <p class="contact-address">
-                    1600 Amphitheatre Parkway<br>
-                    Mountain View, CA<br>
-                    94043 US
+            
+            <div class="input-group mb-3" style="float:left">
+                <select class="selectpicker show-tick" id="inputGroupSelectyear" onfocus="parsing_year('inputGroupSelectyear', 'inputGroupSelectmonth', 'inputGroupSelectdate')">
+                    <option selected>Year</option>
+                </select>
+                 / 
+                <select class="custom-select" id="inputGroupSelectmonth" onfocus="parsing_month('inputGroupSelectyear', 'inputGroupSelectmonth', 'inputGroupSelectdate')">
+                    <option selected>Month</option>
+                </select>
+                 / 
+                <select class="custom-select" id="inputGroupSelectdate" onfocus="parsing_date('inputGroupSelectyear', 'inputGroupSelectmonth', 'inputGroupSelectdate')">
+                    <option selected>Date</option>
+                </select>
+            </div>
+            
+            <div class="input-group-append">
+                <p class="lead" for="inputGroupSelect02">
+                    <span id=Selectyear>--</span> / 
+                    <span id=Selectmonth>--</span> / 
+                    <span id=Selectdate>--</span>
                 </p>
-            </div> <!-- end contact-secondary -->
-
-            <div class="col-five tab-full contact-secondary" data-aos="fade-up">
-                <h3 class="subhead subhead--light">Follow Us</h3>
-
-                <ul class="contact-social">
-                    <li>
-                        <a href="#0"><i class="fab fa-facebook"></i></a>
-                    </li>
-                    <li>
-                        <a href="#0"><i class="fab fa-twitter"></i></a>
-                    </li>
-                    <li>
-                        <a href="#0"><i class="fab fa-instagram"></i></a>
-                    </li>
-                    <li>
-                        <a href="#0"><i class="fab fa-behance"></i></a>
-                    </li>
-                    <li>
-                        <a href="#0"><i class="fab fa-dribbble"></i></a>
-                    </li>
-                </ul> <!-- end contact-social -->
-
-                <div class="contact-subscribe">
-                    <form id="mc-form" class="group mc-form" novalidate="true">
-                        <input type="email" value="" name="EMAIL" class="email" id="mc-email" placeholder="Email Address" required="">
-                        <input type="submit" name="subscribe" value="Subscribe">
-                        <label for="mc-email" class="subscribe-message"></label>
-                    </form>
-                </div> <!-- end contact-subscribe -->
-            </div> <!-- end contact-secondary -->
+            </div>
+            
 
         </div> <!-- end row -->
 
@@ -1058,7 +1156,17 @@ Copyright &copy;<script>document.write(new Date().getFullYear());</script> All r
 			setTimeout(function () {anim_newton = new Animation(frames, img_id, link_id, slider_id, 300, loop_select_id);}, 0);
 		})()
 	</script>
-
+    <script>
+        (function(){
+            var ele = document.getElementById("hw5");
+            ele.addEventListener("mouseover", function(){
+                                                getSelect('inputGroupSelectyear');
+                                                getSelect('inputGroupSelectmonth');
+                                                getSelect('inputGroupSelectdate');
+                                            })
+            })()
+        
+    </script>
 </body>
 
 </html>
