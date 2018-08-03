@@ -31,23 +31,23 @@
 &nbsp; &nbsp; type: element 
 
 
-**init**(*id*) {
+**init**(*id*) 
 
 &nbsp; &nbsp; clear ico_false, ico_true, valid
 
-**display_error**(*id*) {
+**display_error**(*id*) 
 
 &nbsp; &nbsp; show ico_false
 
 &nbsp; &nbsp; display error message in valid
 
-**display_correct**(*id*) {
+**display_correct**(*id*) 
 
 &nbsp; &nbsp; show ico_true
 
 &nbsp; &nbsp; display correct message in valid
 
-**show_password**(*id*){
+**show_password**(*id*)
 
 &nbsp; &nbsp; switch password display or hide
 
@@ -95,11 +95,11 @@
 
 &nbsp; &nbsp; This method is fired when a user hovers over a single star
 
-**StarRating.prototype.clickStarListener** = *function*(*e*) {
+**StarRating.prototype.clickStarListener** = *function*(*e*) 
 
 &nbsp; &nbsp; This method is fired when a user clicks on a single star
 
-**StarRating.prototype.fillStarsUpToElement** = *function*(*el*) {
+**StarRating.prototype.fillStarsUpToElement** = *function*(*el*) 
 
 &nbsp; &nbsp; Fill the star ratings up to a specific position.
 
