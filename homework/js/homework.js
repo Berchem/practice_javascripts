@@ -28,14 +28,14 @@ function validation(id) {
 	this.text = division.querySelector(".text_in").value
 	this.ico_false = division.querySelector(".false")
 	this.ico_true = division.querySelector(".true")
-	this.vaild = division.querySelector(".confirm")
-	return [division, text, ico_false, ico_true, vaild] 
+	this.valid = division.querySelector(".confirm")
+	return [division, text, ico_false, ico_true, valid] 
 }
 
 function init(id) {
-	var division, text, ico_false, ico_true, vaild
-	[, , ico_false, ico_true, vaild] = validation(id)
-	vaild.innerHTML = ""
+	var division, text, ico_false, ico_true, valid
+	[, , ico_false, ico_true, valid] = validation(id)
+	valid.innerHTML = ""
     ico_false.style.display = "none"
 	ico_true.style.display = "none"
 }
@@ -45,7 +45,7 @@ function display_error(id) {
 	[, , ico_false, , ] = validation(id)
 	ico_false.style.display = "inline"
     ico_false.style.color = "#cc147f"
-	vaild.innerHTML = "error"
+	valid.innerHTML = "error"
 }
 
 function display_correct(id) {
@@ -53,7 +53,7 @@ function display_correct(id) {
 	[, , , ico_true, ] = validation(id)
 	ico_true.style.display = "inline"
     ico_true.style.color = "#26bfb5"
-	vaild.innerHTML = "correct"
+	valid.innerHTML = "correct"
 }
 
 function show_password(id){
@@ -109,7 +109,7 @@ function check_pwd(id) {
 }
 
 function check_dt(id) {
-	var division, text, ico_false, ico_true, vaild
+	var division, text, ico_false, ico_true, valid
 	[, text, , , valid] = validation(id)
 	var yyyy, mm, dd, y, m, d
 	[yyyy, mm, dd] = text.split('/')
